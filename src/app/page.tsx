@@ -57,7 +57,7 @@ export default function Home() {
           className="absolute w-full h-full -z-10 left-0 top-0 "
           style={{
             background:
-              'linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.5) 50%, #000000 100%)',
+              'linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.6) 50%, #000000 100%)',
           }}
         ></div>
         <div className="absolute w-full h-full top-0 left-0 -z-20">
@@ -104,9 +104,10 @@ export default function Home() {
               Indonesia akan mencapai 100 tahun kemerdekaannya.
               <br />
               <br />
-              Team R2045 merupakan tim robotik remaja yang berbasis di Depok,
-              Jawa Barat yang akan mengikuti perlombaan robotik World
-              Championship FIRST Tech Challenge 2024.
+              Team R2045 merupakan tim robotik remaja SMP dan SMA dari Madrasah
+              Internasional TechnoNatura yang berbasis di Depok, Jawa Barat,
+              yang akan mengikuti perlombaan robotik World Championship FIRST
+              Tech Challenge 2024.
             </p>
           </PageContainer>
         </div>

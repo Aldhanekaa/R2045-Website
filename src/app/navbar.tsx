@@ -159,7 +159,12 @@ export default function Navbar() {
             <NavbarItemText bigFont link="/">
               Home
             </NavbarItemText>
-
+            <NavbarItemText
+              bigFont
+              link="https://www.ifrfoundation.org/about/first"
+            >
+              About FIRST
+            </NavbarItemText>
             <NavbarItemText bigFont link="">
               Our Robots
             </NavbarItemText>
@@ -167,9 +172,21 @@ export default function Navbar() {
               Outreach
             </NavbarItemText>
 
-            <NavbarItemText bigFont link="">
-              Sponsor
-            </NavbarItemText>
+            <div className={` relative h-full font-medium`}>
+              <a href="/TechnoNatura Int. School | R2045 Indonesia Robotic National Team Sponsorship Proposal (BAHASA).pdf">
+                <div className="relative w-full px-6 font-semibold  h-full flex items-center cursor-pointer">
+                  <div
+                    className="absolute -left-1 w-full -z-10 bg-slate-50 h-full"
+                    style={{
+                      clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0% 100%)',
+                    }}
+                  ></div>
+                  <h6 className=" md:text-sm lg:text-lg text-end text-slate-900">
+                    Sponsor us
+                  </h6>
+                </div>
+              </a>
+            </div>
 
             {/* <div className="px-6 h-3/6 flex items-center border-l-2 ml-6 cursor-pointer">
               EN
