@@ -160,73 +160,15 @@ export default function Navbar() {
               Home
             </NavbarItemText>
 
-            <NavbarItemText
-              bigFont
-              childrens={[
-                {
-                  text: 'About FIRST',
-                  link: '/about/first/',
-                },
-                {
-                  text: `About IFR`,
-                  link: '/#about-ifr',
-                },
-                {
-                  text: `Contact IFR`,
-                  link: '/about/contact-ifr/',
-                },
-              ]}
-            >
-              About
+            <NavbarItemText bigFont link="">
+              Our Robots
             </NavbarItemText>
-            <NavbarItemText
-              bigFont
-              childrens={[
-                {
-                  text: 'FIRST Tech Challenge',
-                  link: '/programs/ftc/',
-                  detail: 'Ages 12 to 18',
-                },
-                {
-                  text: `FIRST Global Challenge`,
-                  link: '/programs/fgc/',
-                  detail: 'Grades 9 to 12',
-                },
-              ]}
-            >
-              Programs
+            <NavbarItemText bigFont link="">
+              Outreach
             </NavbarItemText>
-            <NavbarItemText bigFont link="/events">
-              Events
-            </NavbarItemText>
-            <NavbarItemText
-              bigFont
-              end
-              childrens={[
-                {
-                  text: 'Info for Schools',
-                  link: '/get-involved/info-for-schools',
-                },
-                {
-                  text: `Info for Parents & Guardians`,
-                  link: '/get-involved/info-for-parents',
-                },
-                {
-                  text: `Become a Volunteer!`,
-                  link: '/get-involved/info-for-volunteers',
-                },
-                // {
-                //   text: `Partners & Sponsors`,
-                //   link: '/get-involved/partners-and-sponsors',
-                // },
-                // {
-                //   text: `Become a Volunteer`,
-                //   link: '/get-involved/volunteer',
-                //   detail: 'Volunteer in events',
-                // },
-              ]}
-            >
-              Get Involved
+
+            <NavbarItemText bigFont link="">
+              Sponsor
             </NavbarItemText>
 
             {/* <div className="px-6 h-3/6 flex items-center border-l-2 ml-6 cursor-pointer">
