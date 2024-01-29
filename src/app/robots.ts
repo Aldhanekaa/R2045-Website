@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://www.ifrfoundation.org/sitemap.xml',
+    sitemap: 'https://r2045.org/sitemap.xml',
   };
 }
