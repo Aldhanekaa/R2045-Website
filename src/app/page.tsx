@@ -137,6 +137,7 @@ export default function Home() {
             src={RobotPlays}
             objectFit="cover"
             layout="fill"
+            placeholder="blur"
           />
         </div>
         <div className="w-full relative">
@@ -246,6 +247,7 @@ export default function Home() {
             alt="R2045 Awards Awardee"
             objectFit="cover"
             layout="fill"
+            placeholder="blur"
           />
         </div>
 
