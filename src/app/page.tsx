@@ -5,6 +5,7 @@ import RobotPlays from '@/imgs/RobotPlays.jpg';
 import Excitement from '@/imgs/Excitement.jpeg';
 import Playing from '@/imgs/Playing.jpg';
 import Awards from '@/imgs/Awards.jpg';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 function AwardCard({
   title,
@@ -245,13 +246,14 @@ export default function Home() {
             ))}
           </div>
           <div>
-            <p className="  text-center font-semibold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
+            <p className=" text-center font-semibold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
               <a
                 href=""
-                className="underline underline-offset-4 hover:border-b-2 border-yellow-500"
+                className=" group underline underline-offset-4 hover:border-b-2 border-yellow-500"
               >
                 {' '}
                 Nusantara Regional Awards
+                <FaArrowRightLong className="text-yellow-500 group-hover:translate-x-2 duration-100 inline-block ml-2" />
               </a>
             </p>
             <p className="text-center text-slate-400 mt-2">
