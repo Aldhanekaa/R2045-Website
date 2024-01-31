@@ -61,6 +61,19 @@ const awards = [
   },
 ];
 
+function WINNER_TEXT() {
+  return (
+    <div className="">
+      <h6 className="flex gap-6 font-medium text-3xl">
+        <span className="font-extrabold">#1</span>
+        <span className="inline-block font-black bg-clip-text text-transparent bg-gradient-to-b from-red-400 to-red-700">
+          Winner
+        </span>{' '}
+      </h6>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main className={`w-full ${inter.className}`}>
@@ -257,22 +270,20 @@ export default function Home() {
               </a>
             </p>
             <p className="text-center text-slate-400 mt-2">
-              View More Awards in Nusantara Regional FTC 2023-2024
+              View More Awards Awardee List From FIRST® Official Website
             </p>
           </div>
         </PageContainer>
       </section>
 
-      <section className="w-full bg-slate-50 py-4 px-4">
-        <div className="w-full flex gap-4">
-          <div className="">
-            <h6 className="flex gap-2 font-medium text-3xl">
-              <span className="inline-block font-black bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-red-900">
-                1st
-              </span>{' '}
-              <span>Winner</span>
-            </h6>
-          </div>{' '}
+      <section className="w-full bg-slate-50 py-4 px-4 overflow-hidden">
+        <div className="w-full flex gap-8 italic move-animation">
+          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
+          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
+          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
+          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
+          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
+          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />
         </div>
       </section>
 
@@ -292,37 +303,6 @@ export default function Home() {
             layout="fill"
           />
         </div>
-
-        <PageContainer className="mt-32 py-20 relative">
-          <h5 className="text-center text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-gray-300 to-gray-600 mb-3">
-            We Are Ready For The
-          </h5>
-          <h4 className="text-center text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-800 mb-3">
-            World Championship
-          </h4>
-          <h5 className="text-center text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-500 mb-3">
-            Houston, Texas, United States
-          </h5>
-          <div className="w-full grid grid-cols-9 relative mt-16 mb-20 gap-x-6 gap-y-6">
-            {awards.map((Award, idx) => (
-              <AwardCard {...Award} key={idx} />
-            ))}
-          </div>
-          <div>
-            <p className="  text-center font-semibold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
-              <a
-                href=""
-                className="underline underline-offset-4 hover:border-b-2 border-yellow-500"
-              >
-                {' '}
-                Nusantara Regional Awards
-              </a>
-            </p>
-            <p className="text-center text-slate-400 mt-2">
-              View More Awards in Nusantara Regional FTC 2023-2024
-            </p>
-          </div>
-        </PageContainer>
       </section>
     </main>
   );

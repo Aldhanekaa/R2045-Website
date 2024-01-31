@@ -114,3 +114,21 @@ body {
   top: 39px;
   left: 8px;
 }
+
+/* Define the keyframes for the animation */
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+  /* 100% {
+    transform: translateX(0%);
+  } */
+}
+
+/* Apply the animation to the div */
+.move-animation {
+  animation: moveFromRight 20s ease-in infinite; /* Adjust the duration and easing as needed */
+}
