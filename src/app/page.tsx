@@ -2,6 +2,63 @@ import Image from 'next/legacy/image';
 import { inter } from './fonts';
 import PageContainer from '@/components/PageContainer';
 import RobotPlays from '@/imgs/RobotPlays.jpg';
+import Excitement from '@/imgs/Excitement.jpeg';
+import Playing from '@/imgs/Playing.jpg';
+import Awards from '@/imgs/Awards.jpg';
+
+function AwardCard({
+  title,
+  advancement,
+  place,
+}: {
+  title: string;
+  place: string;
+  advancement?: boolean;
+}) {
+  return (
+    <div className="col-span-9 lg:col-span-3 bg-slate-50 px-6 py-8 rounded-2xl relative">
+      {advancement && (
+        <div className="absolute px-3 py-2 rounded-xl left-4 -top-4 bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
+          <h6 className=""> World Championship Advancement</h6>
+        </div>
+      )}
+      <h5 className=" text-4xl font-black bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
+        {title}
+      </h5>
+      <h6 className="text-2xl font-bold mt-4">
+        <span className="font-black">{place}</span> Place
+      </h6>
+    </div>
+  );
+}
+
+const awards = [
+  {
+    title: 'Inspire Award',
+    place: '1st',
+    advancement: true,
+  },
+  {
+    title: 'Winning Alliance',
+    place: '1st',
+  },
+  {
+    title: 'Think Award',
+    place: '2nd',
+  },
+  {
+    title: 'Connect Award',
+    place: '2nd',
+  },
+  {
+    title: 'Control Award',
+    place: '2nd',
+  },
+  {
+    title: 'Motivate Award',
+    place: '2nd',
+  },
+];
 
 export default function Home() {
   return (
@@ -61,7 +118,12 @@ export default function Home() {
           }}
         ></div>
         <div className="absolute w-full h-full top-0 left-0 -z-20">
-          <Image src={RobotPlays} objectFit="cover" layout="fill" />
+          <Image
+            alt="Robot plays"
+            src={RobotPlays}
+            objectFit="cover"
+            layout="fill"
+          />
         </div>
         <div className="w-full relative">
           {/* <div className="absolute w-3/12 left-0 top-12">
@@ -81,10 +143,10 @@ export default function Home() {
             </div>
           </div> */}
           <PageContainer className="w-full relative">
-            <h3 className="text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-500">
+            <h3 className="text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-500">
               We Are The
             </h3>
-            <h2 className=" text-9xl mt-4 font-black text-center">
+            <h2 className=" text-7xl md:text-9xl mt-4 font-black text-center">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-red-950">
                 R
               </span>
@@ -95,7 +157,7 @@ export default function Home() {
           </PageContainer>
         </div>
 
-        <div className=" px-52 pb-40 pt-20 relative">
+        <div className="px-0 md:px-32 lg:px-52 pb-40 pt-20 relative">
           <PageContainer className="w-full ">
             <p className="text-slate-300 text-center text-2xl">
               Inisiasi pembentukan generasi emas Indonesia menyambut 100 tahun
@@ -112,6 +174,154 @@ export default function Home() {
           </PageContainer>
         </div>
       </div>
+
+      <PageContainer className="mt-32">
+        <section
+          id="quotes"
+          className="grid grid-cols-8 grid-rows-4 md:grid-rows-2 lg:grid-rows-2 gap-x-6 gap-y-6 mb-20"
+        >
+          <div className="lg:col-span-4 lg:row-span-2 md:row-span-1 md:col-span-4 row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
+            <Image
+              src={Excitement}
+              alt="Excitement"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="right"
+              placeholder="blur"
+            />
+          </div>
+          <div className="lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 py-14 rounded-xl text-slate-900 bg-slate-100">
+            <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
+              FTC Nusantara Regional 2024
+            </h4>
+            <p>
+              The first time FIRST Tech Challenge competition held in Indonesia.
+            </p>
+          </div>
+          <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-900 rounded-xl"></div>
+          <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
+            <div className=" hover:scale-125 w-full h-full bg-cover bg-center duration-200 ">
+              <Image
+                src={Playing}
+                alt="Excitement"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="left top"
+                placeholder="blur"
+              />
+            </div>
+          </div>
+        </section>
+      </PageContainer>
+
+      <section
+        className="relative"
+        id="R2045_Awards"
+        aria-label="R2045 Awards, Team #19829"
+      >
+        <div
+          className="absolute w-full h-full -z-10 left-0 top-0 "
+          style={{
+            background:
+              'linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.6) 50%, #000000 100%)',
+          }}
+        ></div>
+        <div className="absolute w-full h-full top-0 right-0 -z-20">
+          <Image
+            src={Awards}
+            alt="R2045 Awards Awardee"
+            objectFit="cover"
+            layout="fill"
+          />
+        </div>
+
+        <PageContainer className="mt-32 py-40 relative">
+          <h4 className="text-center text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-800 mb-3">
+            Our Awards
+          </h4>
+          <div className="w-full grid grid-cols-9 relative mt-16 mb-20 gap-x-6 gap-y-6">
+            {awards.map((Award, idx) => (
+              <AwardCard {...Award} key={idx} />
+            ))}
+          </div>
+          <div>
+            <p className="  text-center font-semibold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
+              <a
+                href=""
+                className="underline underline-offset-4 hover:border-b-2 border-yellow-500"
+              >
+                {' '}
+                Nusantara Regional Awards
+              </a>
+            </p>
+            <p className="text-center text-slate-400 mt-2">
+              View More Awards in Nusantara Regional FTC 2023-2024
+            </p>
+          </div>
+        </PageContainer>
+      </section>
+
+      <section className="w-full bg-slate-50 py-4 px-4">
+        <div className="w-full flex gap-4">
+          <div className="">
+            <h6 className="flex gap-2 font-medium text-3xl">
+              <span className="inline-block font-black bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-red-900">
+                1st
+              </span>{' '}
+              <span>Winner</span>
+            </h6>
+          </div>{' '}
+        </div>
+      </section>
+
+      <section className="relative" aria-label="R2045 Wold Championship">
+        <div
+          className="absolute w-full h-full -z-10 left-0 top-0 "
+          style={{
+            background:
+              'linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.6) 50%, #000000 100%)',
+          }}
+        ></div>
+        <div className="absolute w-full h-full top-0 right-0 -z-20">
+          <Image
+            src={Awards}
+            alt="R2045 Awards Awardee"
+            objectFit="cover"
+            layout="fill"
+          />
+        </div>
+
+        <PageContainer className="mt-32 py-20 relative">
+          <h5 className="text-center text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-gray-300 to-gray-600 mb-3">
+            We Are Ready For The
+          </h5>
+          <h4 className="text-center text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-800 mb-3">
+            World Championship
+          </h4>
+          <h5 className="text-center text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-500 mb-3">
+            Houston, Texas, United States
+          </h5>
+          <div className="w-full grid grid-cols-9 relative mt-16 mb-20 gap-x-6 gap-y-6">
+            {awards.map((Award, idx) => (
+              <AwardCard {...Award} key={idx} />
+            ))}
+          </div>
+          <div>
+            <p className="  text-center font-semibold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
+              <a
+                href=""
+                className="underline underline-offset-4 hover:border-b-2 border-yellow-500"
+              >
+                {' '}
+                Nusantara Regional Awards
+              </a>
+            </p>
+            <p className="text-center text-slate-400 mt-2">
+              View More Awards in Nusantara Regional FTC 2023-2024
+            </p>
+          </div>
+        </PageContainer>
+      </section>
     </main>
   );
 }

@@ -47,66 +47,21 @@ export default function Navbar() {
             <h5 className="text-xl font-normal mb-10">Events</h5>
           </a>
 
-          <h4 className="text-2xl font-semibold mb-4">About</h4>
-          <MobileNavChildren
-            childrens={[
-              {
-                text: 'About FIRST',
-                link: '/about/first/',
-              },
-              {
-                text: `About IFR`,
-                link: '/#about-ifr',
-              },
-              {
-                text: `Contact IFR`,
-                link: '/about/contact-ifr',
-              },
-            ]}
-          />
-
-          <h4 className="text-2xl font-semibold mt-12 mb-4">Programs</h4>
-          <MobileNavChildren
-            childrens={[
-              {
-                text: 'FIRST Tech Challenge',
-                link: '/programs/ftc/',
-                detail: 'Ages 12 to 18',
-              },
-              {
-                text: `FIRST Global Challenge`,
-                link: '/programs/fgc/',
-                detail: 'Grades 9 to 12',
-              },
-            ]}
-          />
-
-          <h4 className="text-2xl font-semibold mt-12 mb-4">Get Involved</h4>
-          <MobileNavChildren
-            childrens={[
-              {
-                text: 'Info for Schools',
-                link: '/get-involved/info-for-schools',
-              },
-              {
-                text: `Info for Parents & Guardians`,
-                link: '/get-involved/info-for-parents',
-              },
-              {
-                text: `Become a Volunteer!`,
-                link: '/get-involved/info-for-volunteers',
-              },
-              // {
-              //   text: `Partners & Sponsors`,
-              //   link: '/get-involved/partners-and-sponsors',
-              // },
-              // {
-              //   text: `Become a Volunteer`,
-              //   link: '/get-involved/volunteer',
-              //   detail: 'Volunteer in events',
-              // },
-            ]}
-          />
+          <div className={` relative h-full font-medium`}>
+            <a href="/TechnoNatura Int. School | R2045 Indonesia Robotic National Team Sponsorship Proposal (BAHASA).pdf">
+              <div className="relative w-full px-6 py-4 font-semibold  h-full flex items-center cursor-pointer">
+                <div
+                  className="absolute -left-1 w-full -z-10 bg-yellow-500 h-full"
+                  style={{
+                    clipPath: 'polygon(0% 0, 100% 0, 100% 100%, 0% 100%)',
+                  }}
+                ></div>
+                <h6 className=" md:text-sm lg:text-lg text-end text-slate-50">
+                  Sponsor us
+                </h6>
+              </div>
+            </a>
+          </div>
         </>
       </MobileNav>
 
@@ -164,12 +119,6 @@ export default function Navbar() {
               link="https://www.ifrfoundation.org/about/first"
             >
               About FIRST
-            </NavbarItemText>
-            <NavbarItemText bigFont link="">
-              Our Robots
-            </NavbarItemText>
-            <NavbarItemText bigFont link="">
-              Outreach
             </NavbarItemText>
 
             <div className={` relative h-full font-medium`}>
