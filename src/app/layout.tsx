@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${inter.className} bg-black overflow-x-hidden`}>
+      <body className={`${inter.className} bg-slate-800 overflow-x-hidden`}>
         <Navbar />
         {children}
         <footer className=" bg-gradient-to-b from-yellow-500 to-yellow-600 text-slate-50 px-4 py-3 ">

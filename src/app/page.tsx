@@ -21,7 +21,7 @@ function AwardCard({
   advancement?: boolean;
 }) {
   return (
-    <div className="col-span-9 lg:col-span-3 bg-slate-50 px-6 py-8 rounded-2xl relative">
+    <div className="col-span-9 lg:col-span-3 bg-slate-50/30 backdrop-blur-md px-6 py-8 rounded-2xl relative">
       {advancement && (
         <div className="absolute px-3 py-2 rounded-xl left-4 -top-4 bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
           <h6 className=""> World Championship Advancement</h6>
@@ -30,7 +30,7 @@ function AwardCard({
       <h5 className=" text-4xl font-black bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
         {title}
       </h5>
-      <h6 className="text-2xl font-bold mt-4">
+      <h6 className="text-2xl font-bold mt-4 text-slate-50">
         <span className="font-black">{place}</span> Place
       </h6>
     </div>
@@ -86,10 +86,10 @@ export default function Home() {
         style={{
           maxHeight: '1200px',
           backgroundImage:
-            'linear-gradient(100.2deg, #120F0F 10.15%, rgba(51, 49, 49, 0.833333) 34.88%, rgba(75, 73, 73, 0.714286) 58.61%, rgba(169, 142, 57, 0.866261) 88.62%, #FBCB2C 105.09%), url(/hero.jpg)',
+            'linear-gradient(100.2deg, rgb(30, 41, 59) 10.15%, rgba(51, 49, 49, 0.833333) 34.88%, rgba(75, 73, 73, 0.714286) 58.61%, rgba(169, 142, 57, 0.866261) 88.62%, #FBCB2C 105.09%), url(/hero.jpg)',
         }}
       >
-        <div className="absolute w-full bottom-0 h-60 bg-gradient-to-b from-transparent to-black"></div>
+        <div className="absolute w-full bottom-0 h-60 bg-gradient-to-b from-transparent to-slate-800"></div>
         <PageContainer>
           <div className="grid grid-cols-9 w-full min:h-screen pt-20 lg:pt-36 pb-44">
             <div className="col-span-9 md:col-span-7 lg:col-span-5 py-32">
@@ -129,10 +129,10 @@ export default function Home() {
 
       <div className="w-full relative mt-44 pb-20">
         <div
-          className="absolute w-full h-full -z-10 left-0 top-0 "
+          className="absolute w-full h-full -z-10 left-0 top-0  "
           style={{
             background:
-              'linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.6) 50%, #000000 100%)',
+              'linear-gradient(180deg, rgb(30, 41, 59) 0%, rgba(30, 41, 59, 0.6) 50%, rgb(234, 179, 8 ) 100%)',
           }}
         ></div>
         <div className="absolute w-full h-full top-0 left-0 -z-20">
@@ -193,73 +193,75 @@ export default function Home() {
           </PageContainer>
         </div>
       </div>
-
-      <PageContainer className="mt-32">
-        <section
-          id="quotes"
-          className="grid grid-cols-8 grid-rows-4 md:grid-rows-2 lg:grid-rows-2 gap-x-6 gap-y-6 mb-20"
-        >
-          <div className="lg:col-span-4 lg:row-span-2 md:row-span-1 md:col-span-4 row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
-            <Image
-              src={NusantaraRegional_2}
-              alt="Excitement"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="left"
-              placeholder="blur"
-            />
-          </div>
-          <div className=" flex flex-col justify-between lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
-            <div>
-              <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
-                FTC Nusantara Regional 2024
-              </h4>
-              <p className="text-xl text-justify mt-6">
-                FIRST Tech Challenge Nusantara Regional 2023-2024 merupakan
-                kompetisi FTC yang pertama kali diadakan di Indonesia yang
-                berlangsung di Depok, Jawa Barat. Kompetisi regional ini diikuti
-                oleh 3 negara diantaranya Indonesia, Malaysia, dan Kazakhstan.
-                Dan diikuti lebih dari 100 siswa mulai dari SMP dan SMA.
-              </p>
-            </div>
-            <div>
-              <div className="px-4 rounded-xl py-2 mt-5 text-yellow-500 underline bg-yellow-50 inline-block">
-                <a
-                  href="https://www.ifrfoundation.org/event/IDDESQ"
-                  target="_blank"
-                  className="font-bold group"
-                >
-                  Nusantara Regional IFR{' '}
-                  <FaArrowRightLong className="text-yellow-500 group-hover:translate-x-2 duration-100 inline-block ml-1" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className=" text-pretty px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-900 rounded-xl">
-            <p className="text-slate-200">
-              Kompetisi ini menjadi kunci keberhasilan tim R2045 untuk
-              mendapatkan kursi di FIRST Tech Challenge World Championship
-              setelah meraih Inspire Award, satu-satunya tim terpilih dari 15
-              tim yang mengikuti kompetisi tersebut.
-              <br />
-              <br /> Kejuaraan dunia tersebut akan berlangsung di jantung kota
-              Houston, Texas, AS.
-            </p>
-          </div>
-          <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
-            <div className=" hover:scale-125 w-full h-full bg-cover bg-center duration-200 ">
+      <section className="bg-yellow-500 pb-200">
+        <PageContainer className="">
+          <section
+            id="quotes"
+            className="grid grid-cols-8 grid-rows-4 md:grid-rows-2 lg:grid-rows-2 gap-x-6 gap-y-6 mb-20"
+          >
+            <div className="lg:col-span-4 lg:row-span-2 md:row-span-1 md:col-span-4 row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
               <Image
-                src={NusantaraRegional_1}
+                src={NusantaraRegional_2}
                 alt="Excitement"
                 layout="fill"
                 objectFit="cover"
-                objectPosition="center top"
+                objectPosition="left"
                 placeholder="blur"
               />
             </div>
-          </div>
-        </section>
-      </PageContainer>
+            <div className=" flex flex-col justify-between lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
+              <div>
+                <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
+                  FTC Nusantara Regional 2024
+                </h4>
+                <p className="text-xl text-justify mt-6">
+                  FIRST Tech Challenge Nusantara Regional 2023-2024 merupakan
+                  kompetisi FTC yang pertama kali diadakan di Indonesia yang
+                  berlangsung di Depok, Jawa Barat. Kompetisi regional ini
+                  diikuti oleh 3 negara diantaranya Indonesia, Malaysia, dan
+                  Kazakhstan. Dan diikuti lebih dari 100 siswa mulai dari SMP
+                  dan SMA.
+                </p>
+              </div>
+              <div>
+                <div className="px-4 rounded-xl py-2 mt-5 text-yellow-500 underline bg-yellow-50 inline-block">
+                  <a
+                    href="https://www.ifrfoundation.org/event/IDDESQ"
+                    target="_blank"
+                    className="font-bold group"
+                  >
+                    Nusantara Regional IFR{' '}
+                    <FaArrowRightLong className="text-yellow-500 group-hover:translate-x-2 duration-100 inline-block ml-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className=" text-pretty px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-900 rounded-xl">
+              <p className="text-slate-200">
+                Kompetisi ini menjadi kunci keberhasilan tim R2045 untuk
+                mendapatkan kursi di FIRST Tech Challenge World Championship
+                setelah meraih Inspire Award, satu-satunya tim terpilih dari 15
+                tim yang mengikuti kompetisi tersebut.
+                <br />
+                <br /> Kejuaraan dunia tersebut akan berlangsung di jantung kota
+                Houston, Texas, AS.
+              </p>
+            </div>
+            <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
+              <div className=" hover:scale-125 w-full h-full bg-cover bg-center duration-200 ">
+                <Image
+                  src={NusantaraRegional_1}
+                  alt="Excitement"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center top"
+                  placeholder="blur"
+                />
+              </div>
+            </div>
+          </section>
+        </PageContainer>
+      </section>
 
       <section
         className="relative"
@@ -270,7 +272,7 @@ export default function Home() {
           className="absolute w-full h-full -z-10 left-0 top-0 "
           style={{
             background:
-              'linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.6) 50%, #000000 100%)',
+              'linear-gradient(180deg, rgb(30, 41, 59) 0%, rgba(30, 41, 59, 0.6) 50%, rgb(30, 41, 59) 100%)',
           }}
         ></div>
         <div className="absolute w-full h-full top-0 right-0 -z-20">
@@ -312,23 +314,12 @@ export default function Home() {
         </PageContainer>
       </section>
 
-      <section className="w-full bg-slate-50 py-4 overflow-hidden">
-        <div className="w-full flex gap-8 italic move-animation">
-          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
-          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
-          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
-          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
-          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
-          <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />
-        </div>
-      </section>
-
       <section className="relative" aria-label="R2045 Wold Championship">
         <div
           className="absolute w-full h-full -z-10 left-0 top-0 "
           style={{
             background:
-              'linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.6) 50%, #000000 100%)',
+              'linear-gradient(180deg, rgb(30, 41, 59) 0%, rgba(30, 41, 59, 0.6) 50%, rgb(30, 41, 59) 100%)',
           }}
         ></div>
         <div className="absolute w-full h-full top-0 right-0 -z-20">
@@ -361,7 +352,7 @@ export default function Home() {
                 placeholder="blur"
               />
             </div>
-            <div className="lg:col-span-4 col-span-9 px-6 md:px-10 py-14 text-slate-900 bg-slate-100 rounded-xl bg-cover bg-center relative overflow-hidden">
+            <div className="lg:col-span-4 col-span-9 px-6 md:px-10 py-14 text-slate-100 bg-slate-100/30 backdrop-blur-md rounded-xl bg-cover bg-center relative overflow-hidden">
               <div>
                 <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
                   FIRST Tech Challenge World Championship
