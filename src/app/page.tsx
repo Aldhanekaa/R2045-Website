@@ -351,7 +351,7 @@ export default function Home() {
             Houston, Texas, United States
           </h5>
           <div className="w-full grid grid-cols-9 relative mt-16 mb-20 gap-x-6 gap-y-6">
-            <div className="lg:col-span-5 col-span-9 rounded-xl bg-cover bg-center relative overflow-hidden">
+            <div className="lg:col-span-5 col-span-9 h-96 lg:h-auto rounded-xl bg-cover bg-center relative overflow-hidden">
               <Image
                 src={EpicMoment}
                 alt="Excitement"
