@@ -120,15 +120,15 @@ body {
   0% {
     transform: translateX(0%);
   }
-  50% {
+  /* 50% {
     transform: translateX(-100%);
-  }
+  } */
   100% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
 }
 
 /* Apply the animation to the div */
 .move-animation {
-  animation: moveFromRight 20s ease-in infinite; /* Adjust the duration and easing as needed */
+  animation: moveFromRight 20s linear infinite; /* Adjust the duration and easing as needed */
 }

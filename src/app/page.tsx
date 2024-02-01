@@ -205,15 +205,26 @@ export default function Home() {
               placeholder="blur"
             />
           </div>
-          <div className="lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 py-14 rounded-xl text-slate-900 bg-slate-100">
+          <div className="lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
             <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
               FTC Nusantara Regional 2024
             </h4>
-            <p>
-              The first time FIRST Tech Challenge competition held in Indonesia.
+            <p className="text-xl text-justify mt-6">
+              FIRST Tech Challenge Nusantara Regional 2023-2024 is the first
+              time, FTC competition held in Indonesia which took place in Depok,
+              West Java. This regional competition joined by 3 countries
+              including Indonesia, Malaysia, and Kazakhstan. And more than 100
+              students ranging from junior and senior high school participated.
             </p>
           </div>
-          <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-900 rounded-xl"></div>
+          <div className=" text-justify px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-900 rounded-xl">
+            <p className="text-slate-200">
+              This competition is the success key for R2045 team to obtain a
+              seat in FIRST Tech Challenge World Championship after achieving
+              Inspire Award, the only one selected team among 15 teams in the
+              competition.
+            </p>
+          </div>
           <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
             <div className=" hover:scale-125 w-full h-full bg-cover bg-center duration-200 ">
               <Image
@@ -263,7 +274,8 @@ export default function Home() {
           <div>
             <p className=" text-center font-semibold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
               <a
-                href=""
+                target="_blank"
+                href="https://ftc-events.firstinspires.org/2023/IDDESQ/awards"
                 className=" group underline underline-offset-4 hover:border-b-2 border-yellow-500"
               >
                 {' '}
@@ -278,7 +290,7 @@ export default function Home() {
         </PageContainer>
       </section>
 
-      <section className="w-full bg-slate-50 py-4 px-4 overflow-hidden">
+      <section className="w-full bg-slate-50 py-4 overflow-hidden">
         <div className="w-full flex gap-8 italic move-animation">
           <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
           <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT /> <WINNER_TEXT />{' '}
