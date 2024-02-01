@@ -5,6 +5,10 @@ import RobotPlays from '@/imgs/RobotPlays.jpg';
 import Excitement from '@/imgs/Excitement.jpeg';
 import Playing from '@/imgs/Playing.jpg';
 import Awards from '@/imgs/Awards.jpg';
+import EpicMoment from '@/imgs/EpicMoment.jpg';
+import NusantaraRegional_1 from '@/imgs/NusantaraRegional_1.jpg';
+import NusantaraRegional_2 from '@/imgs/NusantaraRegional_2.jpg';
+
 import { FaArrowRightLong } from 'react-icons/fa6';
 
 function AwardCard({
@@ -40,7 +44,7 @@ const awards = [
     advancement: true,
   },
   {
-    title: 'Winning Alliance',
+    title: 'Winner Alliance',
     place: '1st',
   },
   {
@@ -197,38 +201,55 @@ export default function Home() {
         >
           <div className="lg:col-span-4 lg:row-span-2 md:row-span-1 md:col-span-4 row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
             <Image
-              src={Excitement}
+              src={NusantaraRegional_1}
               alt="Excitement"
               layout="fill"
               objectFit="cover"
-              objectPosition="right"
+              objectPosition="center"
               placeholder="blur"
             />
           </div>
-          <div className="lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
-            <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
-              FTC Nusantara Regional 2024
-            </h4>
-            <p className="text-xl text-justify mt-6">
-              FIRST Tech Challenge Nusantara Regional 2023-2024 is the first
-              time, FTC competition held in Indonesia which took place in Depok,
-              West Java. This regional competition joined by 3 countries
-              including Indonesia, Malaysia, and Kazakhstan. And more than 100
-              students ranging from junior and senior high school participated.
-            </p>
+          <div className=" flex flex-col justify-between lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
+            <div>
+              <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
+                FTC Nusantara Regional 2024
+              </h4>
+              <p className="text-xl text-justify mt-6">
+                FIRST Tech Challenge Nusantara Regional 2023-2024 merupakan
+                kompetisi FTC yang pertama kali diadakan di Indonesia yang
+                berlangsung di Depok, Jawa Barat. Kompetisi regional ini diikuti
+                oleh 3 negara diantaranya Indonesia, Malaysia, dan Kazakhstan.
+                Dan diikuti lebih dari 100 siswa mulai dari SMP dan SMA.
+              </p>
+            </div>
+            <div>
+              <div className="px-4 rounded-xl py-2 mt-5 text-yellow-500 underline bg-yellow-50 inline-block">
+                <a
+                  href="https://www.ifrfoundation.org/event/IDDESQ"
+                  target="_blank"
+                  className="font-bold group"
+                >
+                  Nusantara Regional IFR{' '}
+                  <FaArrowRightLong className="text-yellow-500 group-hover:translate-x-2 duration-100 inline-block ml-1" />
+                </a>
+              </div>
+            </div>
           </div>
-          <div className=" text-justify px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-900 rounded-xl">
+          <div className=" text-pretty px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-900 rounded-xl">
             <p className="text-slate-200">
-              This competition is the success key for R2045 team to obtain a
-              seat in FIRST Tech Challenge World Championship after achieving
-              Inspire Award, the only one selected team among 15 teams in the
-              competition.
+              Kompetisi ini menjadi kunci keberhasilan tim R2045 untuk
+              mendapatkan kursi di FIRST Tech Challenge World Championship
+              setelah meraih Inspire Award, satu-satunya tim terpilih dari 15
+              tim yang mengikuti kompetisi tersebut.
+              <br />
+              <br /> Kejuaraan dunia tersebut akan berlangsung di jantung kota
+              Houston, Texas, AS.
             </p>
           </div>
           <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
             <div className=" hover:scale-125 w-full h-full bg-cover bg-center duration-200 ">
               <Image
-                src={Playing}
+                src={NusantaraRegional_2}
                 alt="Excitement"
                 layout="fill"
                 objectFit="cover"
@@ -271,7 +292,7 @@ export default function Home() {
               <AwardCard {...Award} key={idx} />
             ))}
           </div>
-          <div>
+          <div className="">
             <p className=" text-center font-semibold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600">
               <a
                 target="_blank"
@@ -284,7 +305,8 @@ export default function Home() {
               </a>
             </p>
             <p className="text-center text-slate-400 mt-2">
-              View More Awards Awardee List From FIRST® Official Website
+              View More FTC Nusantara Regional Awards List From FIRST® Tech
+              Challenge Official Website
             </p>
           </div>
         </PageContainer>
@@ -311,12 +333,52 @@ export default function Home() {
         ></div>
         <div className="absolute w-full h-full top-0 right-0 -z-20">
           <Image
-            src={Awards}
+            src={EpicMoment}
             alt="R2045 Awards Awardee"
             objectFit="cover"
             layout="fill"
           />
         </div>
+
+        <PageContainer className="mt-32 py-20 relative">
+          <h5 className="lg:text-center text-3xl md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-gray-300 to-gray-600 mb-3">
+            We Are Ready For The
+          </h5>
+          <h4 className="lg:text-center text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-800 mb-3">
+            World Championship
+          </h4>
+          <h5 className="lg:text-center text-4xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-500 mb-3">
+            Houston, Texas, United States
+          </h5>
+          <div className="w-full grid grid-cols-9 relative mt-16 mb-20 gap-x-6 gap-y-6">
+            <div className="lg:col-span-5 col-span-9 rounded-xl bg-cover bg-center relative overflow-hidden">
+              <Image
+                src={EpicMoment}
+                alt="Excitement"
+                layout="fill"
+                objectFit="cover"
+                objectPosition="right"
+                placeholder="blur"
+              />
+            </div>
+            <div className="lg:col-span-4 col-span-9 px-6 md:px-10 py-14 text-slate-900 bg-slate-100 rounded-xl bg-cover bg-center relative overflow-hidden">
+              <div>
+                <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
+                  FIRST Tech Challenge World Championship
+                </h4>
+                <p className="text-xl text-justify mt-6">
+                  Setelah meraih penghargaan Inspire Award di FTC Nusantara
+                  Regional, tim R2045 berhasil meraih kursi di kejuaraan dunia
+                  kompetisi robotik FIRST Tech Challenge. Tim R2045 menjadi
+                  satu-satunya tim robotik Indonesia yang akan berangkat ke
+                  Houston, Texas, Amerika Serikat untuk mengharumkan nama bangsa
+                  Indonesia dan menginspirasi anak-anak muda dan pelajar lainnya
+                  seperti kami.
+                </p>
+              </div>
+            </div>
+          </div>
+        </PageContainer>
       </section>
     </main>
   );
