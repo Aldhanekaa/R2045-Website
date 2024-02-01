@@ -193,7 +193,7 @@ export default function Home() {
           </PageContainer>
         </div>
       </div>
-      <section className="bg-yellow-500 pb-200">
+      <section className="bg-yellow-500 pb-20">
         <PageContainer className="">
           <section
             id="quotes"
