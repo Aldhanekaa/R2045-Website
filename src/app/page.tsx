@@ -201,11 +201,11 @@ export default function Home() {
         >
           <div className="lg:col-span-4 lg:row-span-2 md:row-span-1 md:col-span-4 row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
             <Image
-              src={NusantaraRegional_1}
+              src={NusantaraRegional_2}
               alt="Excitement"
               layout="fill"
               objectFit="cover"
-              objectPosition="center"
+              objectPosition="left"
               placeholder="blur"
             />
           </div>
@@ -249,11 +249,11 @@ export default function Home() {
           <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
             <div className=" hover:scale-125 w-full h-full bg-cover bg-center duration-200 ">
               <Image
-                src={NusantaraRegional_2}
+                src={NusantaraRegional_1}
                 alt="Excitement"
                 layout="fill"
                 objectFit="cover"
-                objectPosition="left top"
+                objectPosition="center top"
                 placeholder="blur"
               />
             </div>
