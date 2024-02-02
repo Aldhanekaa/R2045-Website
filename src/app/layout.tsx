@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './navbar';
 import PageContainer from '@/components/PageContainer';
-import { FaTiktok, FaInstagram } from 'react-icons/fa6';
+import { FaYoutube, FaInstagram } from 'react-icons/fa6';
 import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -42,7 +42,15 @@ export default function RootLayout({
                 target="_blank"
               >
                 {' '}
-                <FaInstagram className="text-xl hover:text-slate-300" />
+                <FaInstagram className="text-xl " />
+              </a>
+
+              <a
+                href="https://www.youtube.com/@R2045_ID"
+                aria-label="R2045 Instagram Page"
+                target="_blank"
+              >
+                <FaYoutube className="text-xl hover:text-slate-300" />
               </a>
             </div>
           </PageContainer>

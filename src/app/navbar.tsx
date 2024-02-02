@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import MobileNav, { MobileNavChildren } from '@/components/Navbar/MobileNav';
 import NavbarItemText from '@/components/Navbar/Navbar';
 import React, { useState, useEffect } from 'react';
+import { FaInstagram, FaYoutube } from 'react-icons/fa6';
 
 const invalidUrlsRegex = [
   /^\/programs\/ftc\.*/,
@@ -56,7 +57,7 @@ export default function Navbar() {
         isScrolled
           ? 'bg-slate-50/75 text-slate-700 shadow-xl backdrop-blur-xl'
           : 'transparent text-slate-100 shadow-sm backdrop-blur-md'
-      } pt-3 duration-200  w-full top-0 z-40 ${inter.className} `}
+      }  duration-200  w-full top-0 z-40 ${inter.className} `}
     >
       <MobileNav active={isOpen}>
         <>
@@ -87,7 +88,7 @@ export default function Navbar() {
         </>
       </MobileNav>
 
-      <PageContainer>
+      <PageContainer className="pt-3">
         <div
           style={{
             borderBottomWidth: '1px',
@@ -169,6 +170,44 @@ export default function Navbar() {
           </div>
         </div>
       </PageContainer>
+
+      <div
+        className={`w-full py-4 ${
+          isScrolled
+            ? ''
+            : 'transparent text-slate-100 shadow-sm backdrop-blur-md'
+        }`}
+      >
+        <PageContainer>
+          <div className="flex items-center gap-3">
+            <h6 className="inline-block">Follow us on</h6>
+            <div className={`inline-flex gap-4 text-xl `}>
+              <a
+                href="https://www.instagram.com/r2045.id/"
+                aria-label="R2045 Instagram Page"
+                target="_blank"
+                className={`${
+                  isScrolled ? 'hover:text-slate-400' : 'hover:text-slate-400'
+                }`}
+              >
+                {' '}
+                <FaInstagram className="" />
+              </a>
+              <a
+                href="https://www.youtube.com/@R2045_ID"
+                aria-label="R2045 Instagram Page"
+                target="_blank"
+                className={`${
+                  isScrolled ? 'hover:text-slate-400' : 'hover:text-slate-400'
+                }`}
+              >
+                {' '}
+                <FaYoutube className="" />
+              </a>
+            </div>
+          </div>
+        </PageContainer>
+      </div>
     </nav>
   );
 }
