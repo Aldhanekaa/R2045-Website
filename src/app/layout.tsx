@@ -4,9 +4,7 @@ import './globals.css';
 import Navbar from './navbar';
 import PageContainer from '@/components/PageContainer';
 import { FaTiktok, FaInstagram } from 'react-icons/fa6';
-import Image from 'next/legacy/image';
-
-import Background from '@/imgs/background.png';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,6 +28,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Analytics />
         <footer className=" bg-gradient-to-b from-yellow-500 to-yellow-600 text-slate-50 px-4 py-3 ">
           <PageContainer className="flex justify-between">
             <div>
