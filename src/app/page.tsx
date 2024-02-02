@@ -193,85 +193,19 @@ export default function Home() {
           </PageContainer>
         </div>
       </div>
-      <section className="bg-yellow-500 pb-60 relative">
-        <div className="absolute w-full bottom-0 h-96 bg-gradient-to-b from-transparent to-slate-800"></div>
 
-        <PageContainer className="relative">
-          <section
-            id="quotes"
-            className="grid grid-cols-8 grid-rows-4 md:grid-rows-2 lg:grid-rows-2 gap-x-6 gap-y-6 mb-20"
-          >
-            <div className="lg:col-span-4 lg:row-span-2 md:row-span-1 md:col-span-4 row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
-              <Image
-                src={NusantaraRegional_2}
-                alt="Excitement"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="left"
-                placeholder="blur"
-              />
-            </div>
-            <div className=" flex flex-col justify-between lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
-              <div>
-                <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
-                  FTC Nusantara Regional 2024
-                </h4>
-                <p className="text-xl text-justify mt-6">
-                  FIRST Tech Challenge Nusantara Regional 2023-2024 merupakan
-                  kompetisi FTC yang pertama kali diadakan di Indonesia yang
-                  berlangsung di Depok, Jawa Barat. Kompetisi regional ini
-                  diikuti oleh 3 negara diantaranya Indonesia, Malaysia, dan
-                  Kazakhstan. Dan diikuti lebih dari 100 siswa mulai dari SMP
-                  dan SMA.
-                </p>
-              </div>
-              <div>
-                <div className="px-4 rounded-xl py-2 mt-5 text-yellow-500 underline bg-yellow-50 inline-block">
-                  <a
-                    href="https://www.ifrfoundation.org/event/IDDESQ"
-                    target="_blank"
-                    className="font-bold group"
-                  >
-                    Nusantara Regional IFR{' '}
-                    <FaArrowRightLong className="text-yellow-500 group-hover:translate-x-2 duration-100 inline-block ml-1" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className=" text-pretty px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-700 rounded-xl">
-              <p className="text-slate-200">
-                Kompetisi ini menjadi kunci keberhasilan tim R2045 untuk
-                mendapatkan kursi di FIRST Tech Challenge World Championship
-                setelah meraih Inspire Award, satu-satunya tim terpilih dari 15
-                tim yang mengikuti kompetisi tersebut.
-                <br />
-                <br /> Kejuaraan dunia tersebut akan berlangsung di jantung kota
-                Houston, Texas, AS.
-              </p>
-            </div>
-            <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
-              <div className=" hover:scale-125 w-full h-full bg-cover bg-center duration-200 ">
-                <Image
-                  src={NusantaraRegional_1}
-                  alt="Excitement"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center top"
-                  placeholder="blur"
-                />
-              </div>
-            </div>
-          </section>
-        </PageContainer>
-      </section>
-      {/* 
-      <section className="bg-yellow-500 pt-60 pb-60 relative">
+      {/* <section className="bg-yellow-500 pt-60 pb-60 relative">
         <PageContainer>
-          <h4 className=" text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-800 to-slate-600 mb-3">
+          <h4 className=" text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-300 mb-3">
             Team Members
           </h4>
+
+          <div className="grid grid-cols-9">
+
+          </div>
         </PageContainer>
-      </section>
+      </section> */}
+
       <section className="bg-yellow-500 pb-60 relative">
         <div className="absolute w-full bottom-0 h-96 bg-gradient-to-b from-transparent to-slate-800"></div>
 
@@ -342,7 +276,7 @@ export default function Home() {
             </div>
           </section>
         </PageContainer>
-      </section> */}
+      </section>
 
       <section
         className="relative"

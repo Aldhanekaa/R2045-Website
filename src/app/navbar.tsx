@@ -1,12 +1,12 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react';
 import PageContainer from '../components/PageContainer';
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa';
 import { inter } from '@/app/fonts';
 import { usePathname } from 'next/navigation';
 import MobileNav, { MobileNavChildren } from '@/components/Navbar/MobileNav';
 import NavbarItemText from '@/components/Navbar/Navbar';
+import React, { useState, useEffect } from 'react';
 
 const invalidUrlsRegex = [
   /^\/programs\/ftc\.*/,
@@ -26,15 +26,37 @@ function validateUrl(pathName: string): boolean {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setScrolled] = useState(false);
+
   const pathName = usePathname();
   const genericHamburgerLine = `h-1 w-8 my-1 rounded-full bg-black transition ease transform duration-300`;
+
+  useEffect(() => {
+    // print('e');
+
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      console.log(isScrolled);
+      setScrolled(isScrolled);
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <nav
       // shadow-xl backdrop-blur-xl
-      className={`${
-        validateUrl(pathName) ? '' : 'fixed'
-      }  transparent py-3  w-full top-0 z-40 ${inter.className}`}
+      className={`${validateUrl(pathName) ? '' : 'fixed'}  ${
+        isScrolled
+          ? 'bg-slate-50/75 text-slate-700 shadow-xl backdrop-blur-xl'
+          : 'transparent text-slate-100 shadow-sm backdrop-blur-md'
+      } pt-3 duration-200  w-full top-0 z-40 ${inter.className} `}
     >
       <MobileNav active={isOpen}>
         <>
@@ -70,7 +92,9 @@ export default function Navbar() {
           style={{
             borderBottomWidth: '1px',
           }}
-          className="w-full grid grid-cols-9 py-4 relative border-slate-200/30"
+          className={`w-full grid grid-cols-9 py-4 relative ${
+            isScrolled ? 'border-slate-900/50' : 'border-slate-200/30'
+          }`}
         >
           <div className="col-span-2 md:col-span-1">
             <a href="/">
@@ -91,21 +115,21 @@ export default function Navbar() {
                 className={`${genericHamburgerLine} ${
                   isOpen
                     ? 'rotate-45 translate-y-3 opacity-100 group-hover:opacity-100'
-                    : 'bg-slate-100 opacity-100 group-hover:opacity-100'
+                    : 'bg-slate-700 opacity-100 group-hover:opacity-100'
                 }`}
               />
               <div
                 className={`${genericHamburgerLine} ${
                   isOpen
                     ? 'opacity-0'
-                    : 'bg-slate-100 opacity-100 group-hover:opacity-100'
+                    : 'bg-slate-700 opacity-100 group-hover:opacity-100'
                 }`}
               />
               <div
                 className={`${genericHamburgerLine} ${
                   isOpen
                     ? '-rotate-45 -translate-y-3 opacity-100 group-hover:opacity-100'
-                    : 'bg-slate-100 opacity-100 group-hover:opacity-100'
+                    : 'bg-slate-700 opacity-100 group-hover:opacity-100'
                 }`}
               />
             </button>
@@ -125,7 +149,9 @@ export default function Navbar() {
               <a href="/TechnoNatura School - R2045 Indonesia Robotic Sponsorship Proposal (BAHASA).pdf">
                 <div className="relative w-full px-6 font-semibold  h-full flex items-center cursor-pointer">
                   <div
-                    className="absolute -left-1 w-full -z-10 bg-slate-50 h-full"
+                    className={`absolute -left-1 w-full -z-10 ${
+                      isScrolled ? 'bg-slate-200' : 'bg-slate-50'
+                    } h-full`}
                     style={{
                       clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0% 100%)',
                     }}

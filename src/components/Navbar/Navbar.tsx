@@ -76,9 +76,7 @@ export default function NavbarItemText({
           <h6
             className={`${
               bigFont ? 'text-xl' : ' text-xs lg:text-sm'
-            }  text-end ${
-              textColorBlack ? 'text-slate-800' : 'text-slate-200'
-            }`}
+            }  text-end ${textColorBlack ? 'text-slate-800' : 'auto'}`}
           >
             {children}{' '}
             {childrens && (

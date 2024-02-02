@@ -4,6 +4,9 @@ import './globals.css';
 import Navbar from './navbar';
 import PageContainer from '@/components/PageContainer';
 import { FaTiktok, FaInstagram } from 'react-icons/fa6';
+import Image from 'next/legacy/image';
+
+import Background from '@/imgs/background.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +25,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${inter.className} bg-slate-800 overflow-x-hidden`}>
+      <body
+        className={`${inter.className} bg-slate-800 overflow-x-hidden relative`}
+      >
         <Navbar />
         {children}
         <footer className=" bg-gradient-to-b from-yellow-500 to-yellow-600 text-slate-50 px-4 py-3 ">
