@@ -193,8 +193,10 @@ export default function Home() {
           </PageContainer>
         </div>
       </div>
-      <section className="bg-yellow-500 pb-20">
-        <PageContainer className="">
+      <section className="bg-yellow-500 pb-60 relative">
+        <div className="absolute w-full bottom-0 h-96 bg-gradient-to-b from-transparent to-slate-800"></div>
+
+        <PageContainer className="relative">
           <section
             id="quotes"
             className="grid grid-cols-8 grid-rows-4 md:grid-rows-2 lg:grid-rows-2 gap-x-6 gap-y-6 mb-20"
@@ -236,7 +238,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" text-pretty px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-900 rounded-xl">
+            <div className=" text-pretty px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-700 rounded-xl">
               <p className="text-slate-200">
                 Kompetisi ini menjadi kunci keberhasilan tim R2045 untuk
                 mendapatkan kursi di FIRST Tech Challenge World Championship
