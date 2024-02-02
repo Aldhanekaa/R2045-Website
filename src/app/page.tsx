@@ -193,6 +193,14 @@ export default function Home() {
           </PageContainer>
         </div>
       </div>
+      {/* 
+      <section className="bg-yellow-500 pt-60 pb-60 relative">
+        <PageContainer>
+          <h4 className=" text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-800 to-slate-600 mb-3">
+            Team Members
+          </h4>
+        </PageContainer>
+      </section>
       <section className="bg-yellow-500 pb-60 relative">
         <div className="absolute w-full bottom-0 h-96 bg-gradient-to-b from-transparent to-slate-800"></div>
 
@@ -263,7 +271,7 @@ export default function Home() {
             </div>
           </section>
         </PageContainer>
-      </section>
+      </section> */}
 
       <section
         className="relative"

@@ -48,7 +48,7 @@ export default function Navbar() {
           </a>
 
           <div className={` relative h-full font-medium`}>
-            <a href="/TechnoNatura Int. School | R2045 Indonesia Robotic National Team Sponsorship Proposal (BAHASA).pdf">
+            <a href="/TechnoNatura School - R2045 Indonesia Robotic Sponsorship Proposal (BAHASA).pdf">
               <div className="relative w-full px-6 py-4 font-semibold  h-full flex items-center cursor-pointer">
                 <div
                   className="absolute -left-1 w-full -z-10 bg-yellow-500 h-full"
@@ -122,7 +122,7 @@ export default function Navbar() {
             </NavbarItemText>
 
             <div className={` relative h-full font-medium`}>
-              <a href="/TechnoNatura Int. School | R2045 Indonesia Robotic National Team Sponsorship Proposal (BAHASA).pdf">
+              <a href="/TechnoNatura School - R2045 Indonesia Robotic Sponsorship Proposal (BAHASA).pdf">
                 <div className="relative w-full px-6 font-semibold  h-full flex items-center cursor-pointer">
                   <div
                     className="absolute -left-1 w-full -z-10 bg-slate-50 h-full"
