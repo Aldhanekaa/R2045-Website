@@ -331,9 +331,16 @@ export default function Home() {
 
       <section className="bg-yellow-500 pt-60 pb-60 relative">
         <PageContainer>
-          <h4 className=" text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-300 mb-3">
-            Team Members
-          </h4>
+          <div className=" md:pr-40 lg:pr-96">
+            <h4 className=" text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-300 mb-3">
+              Team Members
+            </h4>
+            <h5 className="text-slate-100 text-lg text-pretty md:text-2xl mt-6">
+              Anggota tim R2045 memiliki 8 anggota aktif untuk mengikuti
+              kegiatan FIRST Tech Challenge 2023-2024, mereka terdiri dari 4
+              pelajar SMA dan 4 pelajar SMP.
+            </h5>
+          </div>
 
           <div className="grid snap-x scroll-pl-6  grid-cols-none auto-cols-[10rem] grid-flow-col gap-4 overflow-x-auto scroll-smooth gap-x-6 mt-20 gap-y-8 ">
             {members.map((member, idx) => (

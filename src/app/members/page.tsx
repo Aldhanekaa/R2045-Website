@@ -133,7 +133,13 @@ export default function TeamMembers() {
             <div className="grid grid-cols-9 pb-8 text-slate-50  ">
               <div className="col-span-8 md:col-span-7 pt-72">
                 <h1 className="text-4xl lg:text-6xl xl:text-7xl font-extrabold relative text leading-relaxed animate-fade-down animate-once animate-duration-900 animate-normal">
-                  R2045 Team Members
+                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-red-900">
+                    R
+                  </span>
+                  <span className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-700">
+                    2045
+                  </span>{' '}
+                  Team Members
                 </h1>
                 <div className="relative ">
                   <h2 className="mt-8 text-2xl lg:text-4xl font-bold leading-relaxed  animate-fade-down animate-once animate-duration-700 animate-normal">
