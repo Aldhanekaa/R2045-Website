@@ -27,7 +27,7 @@ import CFD from '@/imgs/outreaches/CFD.jpeg';
 import CFD2 from '@/imgs/outreaches/CFD2.jpeg';
 import Podcast from '@/imgs/outreaches/Podcast.jpeg';
 
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { FaAngleRight, FaArrowRightLong } from 'react-icons/fa6';
 import { Metadata } from 'next';
 import JoinUrl from './tools/joinUrl';
 import PastExperiences from '@/components/Experiences';
@@ -357,6 +357,67 @@ export default function Home() {
           </div>
         </PageContainer>
       </div>
+
+      <PageContainer className="grid grid-cols-8 mt-32 pt-12 pb-28">
+        <div className="col-span-8 flex lg:hidden justify-end">
+          <div
+            className="w-full h-96 bg-slate-600 bg-cover mb-12 bg-left relative"
+            style={{
+              clipPath: 'polygon(0 0, 90% 0, 100% 100%, 0% 100%)',
+            }}
+          >
+            <Image
+              alt="Robot plays"
+              src={RobotPlays}
+              layout="fill"
+              objectFit="cover"
+              placeholder="blur"
+            />
+          </div>
+        </div>
+        <div className="col-span-8 lg:col-span-4">
+          <h3 className="text-5xl font-bold mt-6 leading-normal text-slate-50">
+            About{' '}
+            <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-yellow-50 to-yellow-500">
+              FIRST®
+            </span>
+          </h3>
+          <h4 className="text-lg font-semi mt-12 text-justify text-slate-300 mb-6">
+            FIRST® (For Inspiration and Recognition of Science and Technology)
+            adalah organisasi global non-profit dari Amerika Serikat yang
+            didirikan oleh tokoh penemu dan insinyur dari AS yaitu Dean Kamen di
+            tahun 1989. Selama 30 tahun, FIRST® telah menggabungkan pembelajaran
+            STEAM dengan kesenangan dan kegembiraan olahraga serta inspirasi
+            yang datang dari komunitas melalui program yang terbukti berdampak
+            pada pembelajaran, minat, dan pengembangan keterampilan di dalam dan
+            di luar kelas.
+          </h4>
+          <a href="https://www.ifrfoundation.org/about/first" target="_blank">
+            <div className="group mt-4 hover:underline inline-flex items-center bg-gradient-to-r active:from-yellow-700 active:to-orange-700 from-yellow-500 to-orange-500  px-4 py-2 text-slate-50">
+              Learn More
+              <span className="inline-block group-hover:translate-x-1 duration-200">
+                <FaAngleRight />
+              </span>
+            </div>
+          </a>
+        </div>
+        <div className="hidden lg:flex md:col-span-4 xl:col-span-4 justify-end">
+          <div
+            className="w-11/12 h-4/6 xl:h-full bg-slate-600 bg-cover drop-shadow-2xl shadow-2xl bg-left relative"
+            style={{
+              clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)',
+            }}
+          >
+            <Image
+              alt="Robot plays"
+              src={RobotPlays}
+              layout="fill"
+              objectFit="cover"
+              placeholder="blur"
+            />
+          </div>
+        </div>
+      </PageContainer>
 
       <div className="w-full relative mt-44 pb-20">
         <div
