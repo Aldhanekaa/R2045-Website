@@ -488,7 +488,7 @@ export default function Home() {
               id="quotes"
               className="grid grid-cols-8 grid-rows-4 md:grid-rows-2 lg:grid-rows-2 gap-x-6 gap-y-6 mb-20"
             >
-              <div className="lg:col-span-4 lg:row-span-2 md:row-span-1 md:col-span-4 row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
+              <div className="lg:col-span-4 lg:row-span-2 md:row-span-1  row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
                 <Image
                   src={NusantaraRegional_2}
                   alt="Excitement"
@@ -498,7 +498,7 @@ export default function Home() {
                   placeholder="blur"
                 />
               </div>
-              <div className=" flex flex-col justify-between lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
+              <div className=" flex flex-col justify-between lg:col-span-4 lg:row-span-1  md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
                 <div>
                   <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
                     FIRST Tech Challenge Nusantara Regional 2024
@@ -525,7 +525,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className=" text-pretty px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 bg-gray-700 rounded-xl">
+              <div className=" text-pretty px-6 md:px-10 py-14  lg:col-span-2 lg:row-span-1  md:row-span-1 row-span-1 col-span-8 bg-gray-700 rounded-xl">
                 <p className="text-slate-200">
                   Kompetisi ini menjadi kunci keberhasilan tim R2045 untuk
                   mendapatkan kursi di FIRST Tech Challenge World Championship
@@ -536,7 +536,7 @@ export default function Home() {
                   kota Houston, Texas, AS.
                 </p>
               </div>
-              <div className="lg:col-span-2 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
+              <div className="lg:col-span-2 lg:row-span-1  md:row-span-1 row-span-1 col-span-8 rounded-xl overflow-hidden relative">
                 <div className=" hover:scale-125 w-full h-full bg-cover bg-center duration-200 ">
                   <Image
                     src={NusantaraRegional_1}
