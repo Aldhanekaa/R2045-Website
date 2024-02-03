@@ -139,6 +139,9 @@ export default function Navbar() {
             <NavbarItemText bigFont link="/">
               Home
             </NavbarItemText>
+            <NavbarItemText bigFont link="/members">
+              Members
+            </NavbarItemText>
             <NavbarItemText
               bigFont
               link="https://www.ifrfoundation.org/about/first"
@@ -193,6 +196,7 @@ export default function Navbar() {
                 {' '}
                 <FaInstagram className="" />
               </a>
+
               <a
                 href="https://www.youtube.com/@R2045_ID"
                 aria-label="R2045 Instagram Page"
