@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image, { StaticImageData } from 'next/legacy/image';
 import { inter } from './fonts';
 import PageContainer from '@/components/PageContainer';
 import RobotPlays from '@/imgs/RobotPlays.jpg';
@@ -8,6 +8,16 @@ import Awards from '@/imgs/Awards.jpg';
 import EpicMoment from '@/imgs/EpicMoment.jpg';
 import NusantaraRegional_1 from '@/imgs/NusantaraRegional_1.jpg';
 import NusantaraRegional_2 from '@/imgs/NusantaraRegional_2.jpg';
+
+import Yodha from '@/imgs/members/yodha.png';
+import Rafi from '@/imgs/members/rafi.png';
+import Alif from '@/imgs/members/alif.png';
+import Rafif from '@/imgs/members/rafif.png';
+
+import Aldhan from '@/imgs/members/aldhan.png';
+import Taufiq from '@/imgs/members/taufiq.png';
+import Gema from '@/imgs/members/gema.png';
+import Zhafran from '@/imgs/members/zhafran.png';
 
 import { FaArrowRightLong } from 'react-icons/fa6';
 
@@ -36,6 +46,94 @@ function AwardCard({
     </div>
   );
 }
+
+function TeamMemberCard({
+  name,
+  grade,
+  img,
+  role,
+}: {
+  name: string;
+  img: StaticImageData;
+  role: string;
+  grade: string;
+}) {
+  return (
+    <div className="col-span-8 lg:col-span-4 xl:col-span-2 relative py-4  rounded-3xl">
+      <div className="absolute h-5/6 bottom-0 z-0 w-full bg-slate-50 rounded-3xl"></div>
+      <div className="px-8 ">
+        <div className="w-full h-96 relative rounded-2xl overflow-hidden">
+          <Image src={img} alt="member Photo" layout="fill" objectFit="cover" />
+        </div>
+      </div>
+
+      <div className="py-6 bg-slate-50 px-8 z-10 relative rounded-3xl">
+        <div className="flex items-center">
+          <h5 className="text-red-500 font-bold text-3xl inline-block">
+            {name}
+          </h5>
+          <div className="inline-block px-2 py-1 rounded-lg ml-3 mr-2 bg-gradient-to-b from-slate-100 to-slate-200 ">
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-yellow-400 font-semibold">
+              {grade}
+            </span>
+          </div>
+        </div>
+        <h6 className="text-red-400 font-semibold text-xl">{role}</h6>
+      </div>
+    </div>
+  );
+}
+
+const members = [
+  {
+    name: 'Yodha',
+    img: Yodha,
+    role: 'Mechanic, Business',
+    grade: '10th Grade',
+  },
+  {
+    name: 'Taufiq',
+    img: Taufiq,
+    role: 'Mechanic',
+    grade: '10th Grade',
+  },
+  {
+    name: 'Rafi',
+    img: Rafi,
+    role: 'Mechanic',
+    grade: '10th Grade',
+  },
+  {
+    name: 'Aldhan',
+    img: Aldhan,
+    role: 'Programmer',
+    grade: '10th Grade',
+  },
+  {
+    name: 'Gema',
+    img: Gema,
+    role: 'Mechanic',
+    grade: '8th Grade',
+  },
+  {
+    name: 'Rafif',
+    img: Rafif,
+    role: 'Mechanic',
+    grade: '8th Grade',
+  },
+  {
+    name: 'Alif',
+    img: Alif,
+    role: 'Mechanic',
+    grade: '8th Grade',
+  },
+  {
+    name: 'Zhafran',
+    img: Zhafran,
+    role: 'Mechanic',
+    grade: '8th Grade',
+  },
+];
 
 const awards = [
   {
@@ -194,17 +292,19 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <section className="bg-yellow-500 pt-60 pb-60 relative">
+      <section className="bg-yellow-500 pt-60 pb-60 relative">
         <PageContainer>
           <h4 className=" text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-300 mb-3">
             Team Members
           </h4>
 
-          <div className="grid grid-cols-9">
-
+          <div className="grid grid-cols-8 gap-x-6 mt-20 gap-y-8 ">
+            {members.map((member, idx) => (
+              <TeamMemberCard key={idx} {...member} />
+            ))}
           </div>
         </PageContainer>
-      </section> */}
+      </section>
 
       <section className="bg-yellow-500 pb-60 relative">
         <div className="absolute w-full bottom-0 h-96 bg-gradient-to-b from-transparent to-slate-800"></div>
