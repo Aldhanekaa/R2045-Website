@@ -20,6 +20,8 @@ import Gema from '@/imgs/members/gema.png';
 import Zhafran from '@/imgs/members/zhafran.png';
 
 import { FaArrowRightLong } from 'react-icons/fa6';
+import { Metadata } from 'next';
+import JoinUrl from './tools/joinUrl';
 
 function AwardCard({
   title,
@@ -176,6 +178,40 @@ function WINNER_TEXT() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title:
+    'R2045 Indonesia National Youths Robotics Team | Team R2045 Robotics #19829',
+  description:
+    'R2045 adalah tim robotik pelajar SMP dan SMA mewakili negara Republik Indonesia untuk bertanding di lomba kejuaraan dunia FIRST Tech Challenge di Houston, Texas, Amerika Serikat. Tim ini beranggota pelajar muda SMP dan SMA dari Madrasah Internasional TechnoNatura, Depok. ',
+  keywords: [
+    'FIRST Tech Challenge Indonesia',
+    'Tim Robotik',
+    'Tim Robotik R2045',
+    'Tim Robotik SMP',
+    'Tim Robotik SMA',
+    'Tim Robotik Pelajar',
+    'R2045',
+    'IFR',
+    'R2045 #19829',
+  ],
+  openGraph: {
+    locale: 'id',
+    title:
+      'R2045 Indonesia National Youths Robotics Team | Team R2045 Robotics #19829',
+    description:
+      'R2045 adalah tim robotik pelajar SMP dan SMA mewakili negara Republik Indonesia untuk bertanding di lomba kejuaraan dunia FIRST Tech Challenge di Houston, Texas, Amerika Serikat. Tim ini beranggota pelajar muda SMP dan SMA dari Madrasah Internasional TechnoNatura, Depok.',
+    countryName: 'Indonesia',
+    siteName: 'Team Indonesia R2045 Robotics #19829 ',
+    url: JoinUrl('/event/IDDESQ/'),
+  },
+  abstract: 'Tim robotik Indonesia R2045 #19829',
+  appleWebApp: {
+    capable: true,
+    title:
+      'R2045 Indonesia National Youths Robotics Team | Team R2045 Robotics #19829',
+  },
+};
 
 export default function Home() {
   return (
