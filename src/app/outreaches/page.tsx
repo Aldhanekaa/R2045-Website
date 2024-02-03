@@ -46,8 +46,9 @@ export default function OutreachPage() {
                 <div className="relative ">
                   <h2 className="mt-8 text-2xl lg:text-4xl font-light leading-relaxed  animate-fade-down animate-once animate-duration-700 animate-normal">
                     Ini lah promosi dan penjangkauan sosial yang telah kami
-                    lakukan untuk menyebarkan edukasi STEAM dan kompetisi FIRST
-                    ke generasi-generasi muda Indonesia.
+                    lakukan untuk menyebarkan terkait edukasi STEAM dan
+                    kompetisi FIRST ke generasi-generasi muda Indonesia seperti
+                    kami.
                   </h2>
                 </div>
               </div>

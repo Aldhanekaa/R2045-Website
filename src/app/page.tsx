@@ -161,7 +161,7 @@ const outreaches = [
 
   {
     title:
-      'Tim R2045 menjadi salah satu perwakilan kota Depok dalam pameran Indonesia City Expo Makassar 11-14 July 2023',
+      'Tim R2045 memamerkan robot FGC 2022 di acara pameran salah satu pusat pembelanjaan terramai di Depok.',
     img: DetosShowcase,
     link: '/outreaches#detosshowcase',
   },
