@@ -9,7 +9,7 @@ import Gema from '@/imgs/members/gema.png';
 import Zhafran from '@/imgs/members/zhafran.png';
 import Image, { StaticImageData } from 'next/legacy/image';
 import PageContainer from '@/components/PageContainer';
-import IDDESQ_HERO from '@/imgs/EpicMoment.jpg';
+import IDDESQ_HERO from '@/imgs/Excitement.jpeg';
 import { inter } from '../fonts';
 
 function TeamMemberCard({
