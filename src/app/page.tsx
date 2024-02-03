@@ -19,6 +19,14 @@ import Taufiq from '@/imgs/members/taufiq.png';
 import Gema from '@/imgs/members/gema.png';
 import Zhafran from '@/imgs/members/zhafran.png';
 
+import DetosShowcase from '@/imgs/outreaches/DetosShowcase.jpeg';
+import KemenparekrafSupport from '@/imgs/outreaches/KemenparekrafSupport.jpeg';
+import MakassarShowcase from '@/imgs/outreaches/MakassarShowcase.jpeg';
+import PemkotSupport from '@/imgs/outreaches/Pemkot.jpeg';
+import CFD from '@/imgs/outreaches/CFD.jpeg';
+import CFD2 from '@/imgs/outreaches/CFD2.jpeg';
+import Podcast from '@/imgs/outreaches/Podcast.jpeg';
+
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { Metadata } from 'next';
 import JoinUrl from './tools/joinUrl';
@@ -65,7 +73,13 @@ function TeamMemberCard({
       <div className="absolute h-5/6 bottom-0 z-0 w-full bg-slate-50 rounded-3xl"></div>
       <div className="px-8 ">
         <div className="w-full h-96 relative rounded-2xl overflow-hidden">
-          <Image src={img} alt="member Photo" layout="fill" objectFit="cover" />
+          <Image
+            src={img}
+            alt={`Member ${name} Photo`}
+            layout="fill"
+            objectFit="cover"
+            placeholder="blur"
+          />
         </div>
       </div>
 
@@ -85,6 +99,91 @@ function TeamMemberCard({
     </div>
   );
 }
+
+function Outreach({
+  title,
+  img,
+  link,
+}: {
+  title: string;
+  img: StaticImageData;
+  link: string;
+}) {
+  return (
+    <div className=" snap-start snap-always  col-span-3 relative py-4  rounded-3xl">
+      <div className="">
+        <div className="w-full h-96 relative rounded-2xl overflow-hidden">
+          <Image
+            src={img}
+            alt={`${title} Photo`}
+            layout="fill"
+            objectFit="cover"
+            placeholder="blur"
+          />
+        </div>
+      </div>
+
+      <div className="py-6 px-8 z-10 relative rounded-3xl">
+        <div className="flex items-center mb-4">
+          <h5 className="text-slate-100 font-normal text-left text-lg inline-block">
+            {title}
+          </h5>
+        </div>
+        <a
+          href={link}
+          target="_blank"
+          className="font-bold group text-slate-100"
+        >
+          Learn More
+          <FaArrowRightLong className="text-slate-100 group-hover:translate-x-2 duration-100 inline-block ml-1" />
+        </a>{' '}
+      </div>
+    </div>
+  );
+}
+
+const outreaches = [
+  {
+    title:
+      'MENPAREKRAF SANDIAGA UNO BERI DUKUNGAN UNTUK TIM ROBOT R2045 TAMPIL DI AJANG FIRST GLOBAL CHALLENGE (FGC) 2022',
+    img: KemenparekrafSupport,
+    link: '/outreaches#kemenparekrafsupport',
+  },
+  {
+    title:
+      'Wali Kota Depok Lepas Tim Robot R2045 Madrasah Techno Natura Depok Tanding Di Ajang FIRST Global Challenge 2023 Singapura',
+    img: PemkotSupport,
+    link: '/outreaches#pemkotsupport',
+  },
+  {
+    title:
+      'Tim R2045 menjadi salah satu perwakilan kota Depok dalam pameran Indonesia City Expo Makassar 11-14 July 2023',
+    img: MakassarShowcase,
+    link: '/outreaches#makassarshowcase',
+  },
+
+  {
+    title:
+      'Tim R2045 menjadi salah satu perwakilan kota Depok dalam pameran Indonesia City Expo Makassar 11-14 July 2023',
+    img: DetosShowcase,
+    link: '/outreaches#detosshowcase',
+  },
+  {
+    title: 'Tim R2045 diundang oleh Podcast Korpri Depok',
+    img: Podcast,
+    link: '/outreaches#depokcreativecitypodcast',
+  },
+  {
+    title: 'Tim R2045 melakukan promosi di Car Free Day, Jakarta. (2023)',
+    img: CFD,
+    link: '/outreaches#CFD',
+  },
+  {
+    title: 'Tim R2045 melakukan promosi di Car Free Day, Jakarta. (2023)',
+    img: CFD2,
+    link: '/outreaches#CFD',
+  },
+];
 
 const members = [
   {
@@ -350,6 +449,56 @@ export default function Home() {
         </PageContainer>
       </section>
 
+      {/* <section className="bg-yellow-500 pb-60 relative">
+        <PageContainer>
+          <div className=" md:pr-40 lg:pr-96">
+            <h4 className=" text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-300 mb-3">
+              Experiences
+            </h4>
+            <h5 className="text-slate-100 text-lg text-pretty md:text-2xl mt-6">
+              Tim R2045 telah melakukan program promosi sosial selama lebih dari
+              2 tahun. Termasuk, kami mendapatkan dukungan dari Kemenparekraf,
+              Sandiaga Uno dan pemerintah kota Depok untuk mengikuti olimpiade
+              dunia robotik yaitu FIRST Global Challenge.
+            </h5>
+          </div>
+
+          <div className="grid snap-x scroll-pl-6  grid-cols-none auto-cols-[10rem] grid-flow-col gap-4 overflow-x-auto scroll-smooth gap-x-6 mt-20 gap-y-8 ">
+            {members.map((member, idx) => (
+              <TeamMemberCard key={idx} {...member} />
+            ))}
+          </div>
+        </PageContainer>
+      </section> */}
+
+      <section className="bg-yellow-500 pb-60 relative">
+        <PageContainer>
+          <div className="grid grid-cols-9 gap-8 py-8">
+            <div className="hidden lg:block lg:col-span-1">
+              <hr className=" border-4 mt-6 border-slate-100" />
+            </div>
+            <div className="col-span-9 lg:col-span-5">
+              <h4 className=" text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-slate-300 mb-3">
+                Team Outreaches
+              </h4>
+              <h5 className="text-slate-100 text-lg text-pretty md:text-2xl mt-6">
+                Tim R2045 telah melakukan program promosi dan penjangkauan
+                sosial selama lebih dari 2 tahun. Termasuk, kami mendapatkan
+                dukungan dari Kemenparekraf, Sandiaga Uno dan pemerintah kota
+                Depok untuk mengikuti olimpiade dunia robotik yaitu FIRST Global
+                Challenge.
+              </h5>
+            </div>
+          </div>
+
+          <div className="grid snap-x scroll-pl-6  grid-cols-none auto-cols-[10rem] grid-flow-col gap-4 overflow-x-auto scroll-smooth gap-x-6 gap-y-8 ">
+            {outreaches.map((outreach, idx) => (
+              <Outreach key={idx} {...outreach} />
+            ))}
+          </div>
+        </PageContainer>
+      </section>
+
       <section className="bg-yellow-500 pb-60 relative">
         <div className="absolute w-full bottom-0 h-96 bg-gradient-to-b from-transparent to-slate-800"></div>
 
@@ -371,7 +520,7 @@ export default function Home() {
             <div className=" flex flex-col justify-between lg:col-span-4 lg:row-span-1 md:col-span-4 md:row-span-1 row-span-1 col-span-8 px-6 md:px-10 py-14 rounded-xl text-slate-900 bg-slate-100">
               <div>
                 <h4 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-yellow-400 to-yellow-600 mb-3">
-                  FTC Nusantara Regional 2024
+                  FIRST Tech Challenge Nusantara Regional 2024
                 </h4>
                 <p className="text-xl text-justify mt-6">
                   FIRST Tech Challenge Nusantara Regional 2023-2024 merupakan
