@@ -59,7 +59,7 @@ function TeamMemberCard({
   grade: string;
 }) {
   return (
-    <div className="col-span-8 lg:col-span-4 xl:col-span-2 relative py-4  rounded-3xl">
+    <div className=" snap-start snap-always  col-span-2 relative py-4  rounded-3xl">
       <div className="absolute h-5/6 bottom-0 z-0 w-full bg-slate-50 rounded-3xl"></div>
       <div className="px-8 ">
         <div className="w-full h-96 relative rounded-2xl overflow-hidden">
@@ -78,7 +78,7 @@ function TeamMemberCard({
             </span>
           </div>
         </div>
-        <h6 className="text-red-400 font-semibold text-xl">{role}</h6>
+        <h6 className="text-red-400 font-semibold text-xl mt-3">{role}</h6>
       </div>
     </div>
   );
@@ -86,15 +86,21 @@ function TeamMemberCard({
 
 const members = [
   {
-    name: 'Yodha',
-    img: Yodha,
-    role: 'Mechanic, Business',
+    name: 'Taufiq',
+    img: Taufiq,
+    role: 'Mechanic, Programmer',
     grade: '10th Grade',
   },
   {
-    name: 'Taufiq',
-    img: Taufiq,
-    role: 'Mechanic',
+    name: 'Yodha',
+    img: Yodha,
+    role: 'Mechanic, Media',
+    grade: '10th Grade',
+  },
+  {
+    name: 'Aldhan',
+    img: Aldhan,
+    role: 'Programmer, Business',
     grade: '10th Grade',
   },
   {
@@ -103,12 +109,7 @@ const members = [
     role: 'Mechanic',
     grade: '10th Grade',
   },
-  {
-    name: 'Aldhan',
-    img: Aldhan,
-    role: 'Programmer',
-    grade: '10th Grade',
-  },
+
   {
     name: 'Gema',
     img: Gema,
@@ -124,7 +125,7 @@ const members = [
   {
     name: 'Alif',
     img: Alif,
-    role: 'Mechanic',
+    role: 'Mechanic, Media',
     grade: '8th Grade',
   },
   {
@@ -298,7 +299,7 @@ export default function Home() {
             Team Members
           </h4>
 
-          <div className="grid grid-cols-8 gap-x-6 mt-20 gap-y-8 ">
+          <div className="grid snap-x scroll-pl-6  grid-cols-none auto-cols-[10rem] grid-flow-col gap-4 overflow-x-auto scroll-smooth gap-x-6 mt-20 gap-y-8 ">
             {members.map((member, idx) => (
               <TeamMemberCard key={idx} {...member} />
             ))}
