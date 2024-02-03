@@ -27,7 +27,7 @@ import CFD from '@/imgs/outreaches/CFD.jpeg';
 import CFD2 from '@/imgs/outreaches/CFD2.jpeg';
 import Podcast from '@/imgs/outreaches/Podcast.jpeg';
 
-import { FaAngleRight, FaArrowRightLong } from 'react-icons/fa6';
+import { FaAngleRight, FaArrowRightLong, FaPlay } from 'react-icons/fa6';
 import { Metadata } from 'next';
 import JoinUrl from './tools/joinUrl';
 import PastExperiences from '@/components/Experiences';
@@ -419,6 +419,66 @@ export default function Home() {
         </div>
       </PageContainer>
 
+      <div>
+        <div className="w-full relative mt-12 mb-48">
+          <PageContainer
+            className="relative py-24 overflow-hidden rounded-2xl shadow-xl "
+            style={{
+              backgroundImage:
+                'linear-gradient(95.31deg, #000000 0.44%, rgba(0, 0, 0, 0.6) 40.93%)',
+            }}
+          >
+            <div className="absolute w-full h-full -z-20 top-0">
+              <Image
+                src={RobotPlays}
+                layout="fill"
+                placeholder="blur"
+                objectFit="cover"
+                objectPosition={'bottom'}
+                alt="Cover"
+                className=""
+              />
+            </div>
+            <div className="grid grid-cols-9 gap-x-6 gap-y-4 w-full  lg:px-16 z-20">
+              <div className="flex col-span-9 z-10 mb-12 lg:hidden justify-end h-96 rounded-3xl overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/6e-5Uo1dRic?si=-dl9euf4mMFVyhYA"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="col-span-9 lg:col-span-5 py-8">
+                <h4 className="text-3xl font-bold text-slate-50">
+                  FIRST Tech Challenge 2023-2024 CENTERSTAGESM presented by RTX
+                </h4>
+                <h5 className="text-lg font-normal text-slate-300 mt-8 mb-12 text-justify">
+                  Buka tirai kekuatan desain, kreativitas, dan presisi untuk
+                  menciptakan semua pengalaman baru dalam tantangan baru yang
+                  spektakuler. Sains, teknologi, teknik, seni, dan matematika
+                  (STEAM) menginspirasi ide-ide besar, keberanian, dan
+                  kreativitas. Keterampilan ini memungkinkan kita menciptakan
+                  seni dan pengalaman yang menyatukan, mempesona, dan
+                  menggairahkan kita.
+                </h5>
+              </div>
+              <div className="hidden col-span-4 lg:flex justify-end rounded-3xl overflow-hidden">
+                {' '}
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/6e-5Uo1dRic?si=-dl9euf4mMFVyhYA"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </PageContainer>
+        </div>
+      </div>
       <div className="w-full relative mt-44 pb-20">
         <div
           className="absolute w-full h-full -z-10 left-0 top-0  "
@@ -468,7 +528,7 @@ export default function Home() {
           </PageContainer>
         </div>
 
-        <div className="px-0 md:px-32 lg:px-52 pb-40 pt-20 relative">
+        <div className="px-0 md:px-32 lg:px-52 pb-60 pt-20 relative">
           <PageContainer className="w-full ">
             <p className="text-slate-300 text-center text-2xl">
               Inisiasi pembentukan generasi emas Indonesia menyambut 100 tahun
