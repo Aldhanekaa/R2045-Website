@@ -189,32 +189,37 @@ export default function Navbar() {
         }`}
       >
         <PageContainer>
-          <div className="flex items-center gap-3">
-            <h6 className="inline-block">Follow us on</h6>
-            <div className={`inline-flex gap-4 text-xl `}>
-              <a
-                href="https://www.instagram.com/r2045.id/"
-                aria-label="R2045 Instagram Page"
-                target="_blank"
-                className={`${
-                  isScrolled ? 'hover:text-slate-400' : 'hover:text-slate-400'
-                }`}
-              >
-                {' '}
-                <FaInstagram className="" />
-              </a>
+          <div className="grid grid-cols-9 items-center justify-between gap-3">
+            <div className="col-span-9 md:col-span-6 flex items-center gap-3">
+              <h6 className="inline-block">Follow us on</h6>
+              <div className={`inline-flex gap-4 text-xl `}>
+                <a
+                  href="https://www.instagram.com/r2045.id/"
+                  aria-label="R2045 Instagram Page"
+                  target="_blank"
+                  className={`${
+                    isScrolled ? 'hover:text-slate-400' : 'hover:text-slate-400'
+                  }`}
+                >
+                  {' '}
+                  <FaInstagram className="" />
+                </a>
 
-              <a
-                href="https://www.youtube.com/@R2045_ID"
-                aria-label="R2045 Instagram Page"
-                target="_blank"
-                className={`${
-                  isScrolled ? 'hover:text-slate-400' : 'hover:text-slate-400'
-                }`}
-              >
-                {' '}
-                <FaYoutube className="" />
-              </a>
+                <a
+                  href="https://www.youtube.com/@R2045_ID"
+                  aria-label="R2045 Instagram Page"
+                  target="_blank"
+                  className={`${
+                    isScrolled ? 'hover:text-slate-400' : 'hover:text-slate-400'
+                  }`}
+                >
+                  {' '}
+                  <FaYoutube className="" />
+                </a>
+              </div>
+            </div>
+            <div className="col-span-9 md:col-span-3 flex gap-2 justify-end">
+              <span className="">#GenerasiEmas</span> <span>#R2045</span>
             </div>
           </div>
         </PageContainer>

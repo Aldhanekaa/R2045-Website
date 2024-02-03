@@ -130,11 +130,7 @@ function Outreach({
             {title}
           </h5>
         </div>
-        <a
-          href={link}
-          target="_blank"
-          className="font-bold group text-slate-100"
-        >
+        <a href={link} className="font-bold group text-slate-100">
           Learn More
           <FaArrowRightLong className="text-slate-100 group-hover:translate-x-2 duration-100 inline-block ml-1" />
         </a>{' '}
