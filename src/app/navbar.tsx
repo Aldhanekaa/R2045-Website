@@ -185,7 +185,7 @@ export default function Navbar() {
         className={`w-full py-4 ${
           isScrolled
             ? ''
-            : 'transparent text-slate-100 shadow-sm backdrop-blur-md'
+            : 'transparent text-slate-100 shadow-sm backdrop-blur-md relative -z-10'
         }`}
       >
         <PageContainer>

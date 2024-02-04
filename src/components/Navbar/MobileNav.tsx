@@ -25,7 +25,7 @@ export default function MobileNav({
 }) {
   if (active) {
     return (
-      <div className="w-full top-0 absolute h-screen box-border overflow-auto pb-20 pt-28 bg-slate-50 animate-fade-down animate-once animate-normal backdrop-blur-xl">
+      <div className="w-full  text-slate-900 top-0 absolute h-screen box-border overflow-auto pb-20 pt-28 bg-slate-50 animate-fade-down animate-once animate-normal backdrop-blur-xl z-0">
         <div className=" w-full">
           <PageContainer className="pt-12">{children}</PageContainer>
         </div>
