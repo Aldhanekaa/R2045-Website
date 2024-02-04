@@ -27,6 +27,10 @@ import CFD from '@/imgs/outreaches/CFD.jpeg';
 import CFD2 from '@/imgs/outreaches/CFD2.jpeg';
 import Podcast from '@/imgs/outreaches/Podcast.jpeg';
 
+import AboutFIRSTImg from '@/imgs/AboutFIRST.jpg';
+import Excitement2 from '@/imgs/Excitement2.jpg';
+import FIRST_SEASON_THEMES from '@/imgs/FIRST_THEME_COVER.webp';
+
 import { FaAngleRight, FaArrowRightLong, FaPlay } from 'react-icons/fa6';
 import { Metadata } from 'next';
 import JoinUrl from './tools/joinUrl';
@@ -368,7 +372,7 @@ export default function Home() {
           >
             <Image
               alt="Robot plays"
-              src={RobotPlays}
+              src={AboutFIRSTImg}
               layout="fill"
               objectFit="cover"
               placeholder="blur"
@@ -394,7 +398,7 @@ export default function Home() {
           </h4>
           <a href="https://www.ifrfoundation.org/about/first" target="_blank">
             <div className="group mt-4 hover:underline inline-flex items-center bg-gradient-to-r active:from-yellow-700 active:to-orange-700 from-yellow-500 to-orange-500  px-4 py-2 text-slate-50">
-              Learn More
+              Ketahui lebih lanjut
               <span className="inline-block group-hover:translate-x-1 duration-200">
                 <FaAngleRight />
               </span>
@@ -410,7 +414,7 @@ export default function Home() {
           >
             <Image
               alt="Robot plays"
-              src={RobotPlays}
+              src={AboutFIRSTImg}
               layout="fill"
               objectFit="cover"
               placeholder="blur"
@@ -430,11 +434,11 @@ export default function Home() {
           >
             <div className="absolute w-full h-full -z-20 top-0">
               <Image
-                src={RobotPlays}
+                src={FIRST_SEASON_THEMES}
                 layout="fill"
                 placeholder="blur"
                 objectFit="cover"
-                objectPosition={'bottom'}
+                objectPosition={'top left'}
                 alt="Cover"
                 className=""
               />
@@ -454,15 +458,30 @@ export default function Home() {
                 <h4 className="text-3xl font-bold text-slate-50">
                   FIRST Tech Challenge 2023-2024 CENTERSTAGESM presented by RTX
                 </h4>
-                <h5 className="text-lg font-normal text-slate-300 mt-8 mb-12 text-justify">
-                  Buka tirai kekuatan desain, kreativitas, dan presisi untuk
-                  menciptakan semua pengalaman baru dalam tantangan baru yang
-                  spektakuler. Sains, teknologi, teknik, seni, dan matematika
-                  (STEAM) menginspirasi ide-ide besar, keberanian, dan
-                  kreativitas. Keterampilan ini memungkinkan kita menciptakan
-                  seni dan pengalaman yang menyatukan, mempesona, dan
-                  menggairahkan kita.
+                <h5 className="text-lg font-normal text-slate-300 mt-8 mb-6 text-justify">
+                  FIRST® Tech Challenge (FTC) adalah ajang kompetisi robotika
+                  kompetitif oleh organisasi FIRST® yang dirancang khusus untuk
+                  siswa sekolah menengah dan atas. FTC menggabungkan kegembiraan
+                  olahraga dengan Sains, Teknologi,{' '}
+                  <span className="italic">Engineering</span>,{' '}
+                  <span className="italic">Arts</span>, dan Matematika (STEAM)
+                  menginspirasi ide-ide besar, keberanian, dan kreativitas. Tim
+                  FIRST® Tech Challenge (hingga 15 anggota tim, kelas 7-12)
+                  ditantang untuk merancang, membuat, memprogram, dan
+                  mengoperasikan robot untuk bersaing dalam tantangan langsung
+                  dalam format aliansi.
                 </h5>
+                <a
+                  href="https://www.ifrfoundation.org/programs/ftc"
+                  target="_blank"
+                >
+                  <div className="group mt-4 hover:underline inline-flex items-center bg-gradient-to-r active:from-yellow-700 active:to-orange-700 from-yellow-500 to-orange-500  px-4 py-2 text-slate-50">
+                    Ketahui lebih lanjut
+                    <span className="inline-block group-hover:translate-x-1 duration-200">
+                      <FaAngleRight />
+                    </span>
+                  </div>
+                </a>
               </div>
               <div className="hidden col-span-4 lg:flex justify-end rounded-3xl overflow-hidden">
                 {' '}
@@ -731,8 +750,8 @@ export default function Home() {
         ></div>
         <div className="absolute w-full h-full top-0 right-0 -z-20">
           <Image
-            src={EpicMoment}
-            alt="R2045 Awards Awardee"
+            src={Excitement2}
+            alt="Excitement"
             objectFit="cover"
             layout="fill"
           />
