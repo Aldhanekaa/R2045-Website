@@ -36,9 +36,14 @@ export default function Navbar() {
     // print('e');
 
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      console.log(isScrolled);
-      setScrolled(isScrolled);
+      const shouldExpandNav = window.scrollY > 10;
+      console.log(shouldExpandNav);
+
+      if (shouldExpandNav && isScrolled == false) {
+        setScrolled(shouldExpandNav);
+      } else if (shouldExpandNav == false && isScrolled == true) {
+        setScrolled(false);
+      }
     };
 
     // Attach the scroll event listener
@@ -75,7 +80,7 @@ export default function Navbar() {
             <h5 className="text-xl font-normal mb-10">outreaches</h5>
           </a>
           <div className={` relative h-full font-medium`}>
-            <a href="/TechnoNatura School_R2045 Indonesia Robotic Sponsorship Proposal_BAHASA.pdf">
+            <a href="/TechnoNatura School_R2045 Team Indonesia Robotic Sponsorship Proposal_BAHASA.pdf">
               <div className="relative w-full px-6 py-4 font-semibold  h-full flex items-center cursor-pointer">
                 <div
                   className="absolute -left-1 w-full -z-10 bg-yellow-500 h-full"
@@ -157,7 +162,7 @@ export default function Navbar() {
             </NavbarItemText>
 
             <div className={` relative h-full font-medium`}>
-              <a href="/TechnoNatura School_R2045 Indonesia Robotic Sponsorship Proposal_BAHASA.pdf">
+              <a href="/TechnoNatura School_R2045 Team Indonesia Robotic Sponsorship Proposal_BAHASA.pdf">
                 <div className="relative w-full px-6 font-semibold  h-full flex items-center cursor-pointer">
                   <div
                     className={`absolute -left-1 w-full -z-10 ${
