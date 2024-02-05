@@ -96,7 +96,7 @@ export default function Navbar() {
                   }}
                 ></div>
                 <h6 className=" md:text-sm lg:text-lg text-end text-slate-50">
-                  Sponsor us
+                  Become Our Sponsor!
                 </h6>
               </div>
             </a>
@@ -183,7 +183,7 @@ export default function Navbar() {
                     }}
                   ></div>
                   <h6 className=" md:text-sm lg:text-lg text-end text-slate-900">
-                    Sponsor us
+                    Become Sponsor!
                   </h6>
                 </div>
               </a>
