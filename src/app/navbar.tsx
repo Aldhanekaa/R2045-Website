@@ -75,10 +75,10 @@ export default function Navbar() {
             <h5 className="text-xl font-normal mb-10">Members</h5>
           </a>
 
-          <a href="/outreaches">
+          {/* <a href="/outreaches">
             {' '}
             <h5 className="text-xl font-normal mb-10">outreaches</h5>
-          </a>
+          </a> */}
           <div className={` relative h-full font-medium`}>
             <a href="/TechnoNatura School_R2045 Team Indonesia Robotic Sponsorship Proposal_BAHASA.pdf">
               <div className="relative w-full px-6 py-4 font-semibold  h-full flex items-center cursor-pointer">
@@ -151,9 +151,9 @@ export default function Navbar() {
             <NavbarItemText bigFont link="/members">
               Members
             </NavbarItemText>
-            <NavbarItemText bigFont link="/outreaches">
+            {/* <NavbarItemText bigFont link="/outreaches">
               Outreaches
-            </NavbarItemText>
+            </NavbarItemText> */}
             <NavbarItemText
               bigFont
               link="https://www.ifrfoundation.org/about/first"
