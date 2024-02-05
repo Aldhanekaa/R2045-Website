@@ -35,14 +35,18 @@ export default function Navbar() {
   useEffect(() => {
     // print('e');
 
+    let alreadyScrolled = false;
     const handleScroll = () => {
       const shouldExpandNav = window.scrollY > 10;
-      console.log(shouldExpandNav);
 
-      if (shouldExpandNav && isScrolled == false) {
-        setScrolled(shouldExpandNav);
-      } else if (shouldExpandNav == false && isScrolled == true) {
+      if (shouldExpandNav == true && alreadyScrolled == false) {
+        setScrolled(true);
+        alreadyScrolled = true;
+      }
+
+      if (shouldExpandNav == false && alreadyScrolled == true) {
         setScrolled(false);
+        alreadyScrolled = false;
       }
     };
 
