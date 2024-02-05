@@ -74,7 +74,10 @@ export default function Navbar() {
             {' '}
             <h5 className="text-xl font-normal mb-10">Members</h5>
           </a>
-
+          <a href="/contact">
+            {' '}
+            <h5 className="text-xl font-normal mb-10">Contact Us</h5>
+          </a>
           {/* <a href="/outreaches">
             {' '}
             <h5 className="text-xl font-normal mb-10">outreaches</h5>
@@ -154,6 +157,9 @@ export default function Navbar() {
             {/* <NavbarItemText bigFont link="/outreaches">
               Outreaches
             </NavbarItemText> */}
+            <NavbarItemText bigFont link="/contact">
+              Contact Us
+            </NavbarItemText>
             <NavbarItemText
               bigFont
               link="https://www.ifrfoundation.org/about/first"
