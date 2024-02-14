@@ -35,6 +35,7 @@ import { FaAngleRight, FaArrowRightLong, FaPlay } from 'react-icons/fa6';
 import { Metadata } from 'next';
 import JoinUrl from './tools/joinUrl';
 import PastExperiences from '@/components/Experiences';
+import SponsorsList from '@/components/SponsorsList';
 
 function AwardCard({
   title,
@@ -443,7 +444,7 @@ export default function Home() {
                 className=""
               />
             </div>
-            <div className="grid grid-cols-9 gap-x-6 gap-y-4 w-full  lg:px-16 z-20">
+            <div className="grid grid-cols-9 gap-x-10 gap-y-4 w-full  lg:px-16 z-20">
               <div className="flex col-span-9 z-10 mb-12 lg:hidden justify-end h-96 rounded-3xl overflow-hidden">
                 <iframe
                   width="100%"
@@ -456,7 +457,8 @@ export default function Home() {
               </div>
               <div className="col-span-9 lg:col-span-5 py-8">
                 <h4 className="text-3xl font-bold text-slate-50">
-                  FIRST Tech Challenge 2023-2024 CENTERSTAGESM presented by RTX
+                  FIRST Tech Challenge 2023-2024 CENTERSTAGE<sup>SM</sup>{' '}
+                  presented by RTX
                 </h4>
                 <h5 className="text-lg font-normal text-slate-300 mt-8 mb-6 text-justify">
                   FIRST® Tech Challenge (FTC) adalah ajang kompetisi robotika
@@ -616,7 +618,7 @@ export default function Home() {
           </PageContainer>
         </section>
 
-        <section className=" pb-60 relative">
+        <section className=" pb-96 relative">
           <div className="absolute w-full bottom-0 h-96 bg-gradient-to-b from-transparent to-slate-800"></div>
 
           <PageContainer className="relative">
@@ -797,6 +799,8 @@ export default function Home() {
           </div>
         </PageContainer>
       </section>
+
+      <SponsorsList />
     </main>
   );
 }
