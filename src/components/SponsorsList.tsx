@@ -1,5 +1,6 @@
 import Image from 'next/legacy/image';
 import PageContainer from './PageContainer';
+
 import TriwallLogo from '@/imgs/sponsors/Tri-Wall-IndonesiaLOGO.png';
 const supports = [
   {

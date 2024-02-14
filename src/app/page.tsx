@@ -36,6 +36,7 @@ import { Metadata } from 'next';
 import JoinUrl from './tools/joinUrl';
 import PastExperiences from '@/components/Experiences';
 import SponsorsList from '@/components/SponsorsList';
+import SupportersList from '@/components/SupportsList';
 
 function AwardCard({
   title,
@@ -624,7 +625,7 @@ export default function Home() {
           <PageContainer className="relative">
             <section
               id="quotes"
-              className="grid grid-cols-8 grid-rows-4 md:grid-rows-2 lg:grid-rows-2 gap-x-6 gap-y-6 mb-20"
+              className="grid grid-cols-8 grid-rows-4 md:grid-rows-2 lg:grid-rows-2 gap-x-6 gap-y-6"
             >
               <div className="lg:col-span-4 lg:row-span-2 md:row-span-1  row-span-1 col-span-8 rounded-xl bg-cover bg-center relative overflow-hidden">
                 <Image
@@ -688,6 +689,8 @@ export default function Home() {
               </div>
             </section>
           </PageContainer>
+
+          <SupportersList />
         </section>
       </section>
 
