@@ -2,11 +2,18 @@ import Image from 'next/legacy/image';
 import PageContainer from './PageContainer';
 
 import TriwallLogo from '@/imgs/sponsors/Tri-Wall-IndonesiaLOGO.png';
+import AdaroEnergyLogo from '@/imgs/sponsors/AdaroEnergy_Logo.png';
+
 const supports = [
   {
     link: 'https://tri-wallindonesia.co.id/',
     img: TriwallLogo,
-    title: 'Heavy Duty Packaging Solution',
+    title: 'Tri-Wall Indonesia - Heavy Duty Packaging Solution',
+  },
+  {
+    link: 'https://www.adaro.com/',
+    img: AdaroEnergyLogo,
+    title: 'Adaro Energy',
   },
 ];
 export default function SponsorsList() {
