@@ -87,7 +87,7 @@ export default function Navbar() {
             <h5 className="text-xl font-normal mb-10">outreaches</h5>
           </a> */}
           <div className={` relative h-full font-medium`}>
-            <a href="/TechnoNatura School_R2045 Team Indonesia Robotic Sponsorship Proposal_BAHASA.pdf">
+            <a href="/Proposal Keikutsertaan Tim Robotik Indonesia R2045 di Ajang FIRST Tech Challenge World Championship, Houston, AS (2024).pdf">
               <div className="relative w-full px-6 py-4 font-semibold  h-full flex items-center cursor-pointer">
                 <div
                   className="absolute -left-1 w-full -z-10 bg-yellow-500 h-full"
@@ -172,7 +172,7 @@ export default function Navbar() {
             </NavbarItemText>
 
             <div className={` relative h-full font-medium`}>
-              <a href="/TechnoNatura School_R2045 Team Indonesia Robotic Sponsorship Proposal_BAHASA.pdf">
+              <a href="/Proposal Keikutsertaan Tim Robotik Indonesia R2045 di Ajang FIRST Tech Challenge World Championship, Houston, AS (2024).pdf">
                 <div className="relative w-full px-6 font-semibold  h-full flex items-center cursor-pointer">
                   <div
                     className={`absolute -left-1 w-full -z-10 ${
