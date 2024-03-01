@@ -197,7 +197,7 @@ export default function Navbar() {
       </PageContainer>
 
       <div
-        className={`w-full py-4 ${
+        className={`w-full py-4 hidden md:block ${
           isScrolled
             ? ''
             : 'transparent text-slate-100 shadow-sm backdrop-blur-md relative -z-10'

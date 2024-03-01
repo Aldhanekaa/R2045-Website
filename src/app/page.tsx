@@ -582,7 +582,7 @@ export default function Home() {
               </h5>
             </div>
 
-            <div className="grid snap-x scroll-pl-6  grid-cols-none auto-cols-[10rem] grid-flow-col gap-4 overflow-x-auto scroll-smooth gap-x-6 mt-20 gap-y-8 ">
+            <div className="grid snap-x scroll-pl-6  grid-cols-none auto-cols-[12rem] lg:auto-cols-[10rem] grid-flow-col gap-4 overflow-x-auto scroll-smooth gap-x-6 mt-20 gap-y-8 ">
               {members.map((member, idx) => (
                 <TeamMemberCard key={idx} {...member} />
               ))}
